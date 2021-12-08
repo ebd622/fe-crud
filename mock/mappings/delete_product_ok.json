@@ -1,6 +1,6 @@
 {
   "request": {
-    "method": "PUT",
+    "method": "DELETE",
     "urlPath": "/api/v1/products"
   },
   "response": {
