@@ -5,7 +5,7 @@
   },
   "response": {
     "status": 201,
-    "bodyFileName": "put_product_response.json",
+    "bodyFileName": "delete_product_response.json",
     "headers": {
       "Content-Type": "application/json"
     }
