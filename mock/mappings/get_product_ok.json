@@ -6,6 +6,10 @@
   "response": {
     "status": 200,
     "bodyFileName": "get_product_response.json",
+    "jsonBody": {
+      "url": "/api/senses/signer/qslo.htm",
+      "abortUrl": "/api/senses/signer/rassabortsign.html"
+    },
     "headers": {
       "Content-Type": "application/json"
     }
