@@ -5,7 +5,10 @@
   },
   "response": {
     "status": 200,
-    "bodyFileName": "get_product_response.json",
+    "jsonBody": {
+      "name": "Meet",
+      "price": "10"
+    },
     "headers": {
       "Content-Type": "application/json"
     }
