@@ -9,8 +9,8 @@ docker run --rm -d -p 9090:8080 -p 8443:8443 --name wiremock_demo \
 
 Get products
 ```
-curl localhost:9090/api/v1/products
+curl -i localhost:9090/api/v1/products
 ```
 ```
-curl -X POST localhost:9090/api/v1/products
+curl -i -X POST localhost:9090/api/v1/products
 ```
