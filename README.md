@@ -11,3 +11,6 @@ Get products
 ```
 curl localhost:9090/api/v1/products
 ```
+```
+curl -X POST localhost:9090/api/v1/products
+```
