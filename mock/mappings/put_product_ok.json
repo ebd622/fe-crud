@@ -4,7 +4,7 @@
     "urlPath": "/api/v1/products",
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.['id'] =~ ~ /-?(\\d+)/)]"
+        "matchesJsonPath": "$[?(@.['id'] =~ /-?(\\d+)/)]"
       },
       {
         "matchesJsonPath": "$[?(@.['name'] =~ /[A-Za-z0-9_-]+/)]"
