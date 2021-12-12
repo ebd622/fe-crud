@@ -14,3 +14,9 @@ curl -i localhost:9090/api/v1/products
 ```
 curl -i -X POST localhost:9090/api/v1/products
 ```
+
+```
+curl -i -X PUT -d \
+'{"id":"1","name":"bike","description":"Brand: Gazelle","price":"100"}' \
+localhost:9090/api/v1/products
+```
