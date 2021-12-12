@@ -4,13 +4,13 @@
     "urlPath": "/api/v1/products",
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.['id'] =~ /[A-Za-z0-9_-]+/)]"
+        "matchesJsonPath": "$[?(@.['id'] =~ ~ /-?(\\d+)/)]"
       },
       {
         "matchesJsonPath": "$[?(@.['name'] =~ /[A-Za-z0-9_-]+/)]"
       },
       {
-        "matchesJsonPath": "$[?(@.['description'] =~ /[.]+/)]"
+        "matchesJsonPath": "$[?(@.['description'] =~ /-?(.+)/)]"
       },
       {
         "matchesJsonPath": "$[?(@.['price'] =~ /[A-Za-z0-9_-]+/)]"
