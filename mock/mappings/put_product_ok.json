@@ -4,8 +4,10 @@
     "urlPath": "/api/v1/products"
   },
   "response": {
-    "status": 202,
-    "bodyFileName": "put_product_response.json",
+    "status": 200,
+    "jsonBody": {
+      "id": "1"
+    },
     "headers": {
       "Content-Type": "application/json"
     }
