@@ -16,7 +16,6 @@
         "matchesJsonPath": "$[?(@.['price'] =~ /[A-Za-z0-9_-]+/)]"
       }    
     ]
-
   },
   "response": {
     "status": 200,
