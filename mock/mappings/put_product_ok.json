@@ -13,9 +13,9 @@
     "status": 200,
     "jsonBody": {
       "id": "1",
-      "name": "1",
-      "description": "1",
-      "price": "1"
+      "name": "bike",
+      "description": "Brand: Gazelle",
+      "price": "100"
     },
     "headers": {
       "Content-Type": "application/json"
