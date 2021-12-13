@@ -11,6 +11,7 @@ Get all products
 ```
 curl -i localhost:9090/api/v1/products
 ```
+Create a new product
 ```
 curl -i -X POST localhost:9090/api/v1/products
 ```
