@@ -17,7 +17,7 @@ curl -i -X POST -d \
 '{"name":"bike","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
-
+Update an exising product
 ```
 curl -i -X PUT -d \
 '{"id":"1","name":"bike","description":"Brand: Gazelle","price":"100"}' \
