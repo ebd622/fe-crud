@@ -13,7 +13,9 @@ curl -i localhost:9090/api/v1/products
 ```
 Create a new product
 ```
-curl -i -X POST localhost:9090/api/v1/products
+curl -i -X POST -d \
+'{"name":"bike","description":"Brand: Gazelle","price":"100"}' \
+localhost:9090/api/v1/products
 ```
 
 ```
@@ -22,11 +24,6 @@ curl -i -X PUT -d \
 localhost:9090/api/v1/products
 ```
 
-```
-curl -i -X POST -d \
-'{"name":"bike","description":"Brand: Gazelle","price":"100"}' \
-localhost:9090/api/v1/products
-```
 
 ```
 curl -i -X DELETE -d \
