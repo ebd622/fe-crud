@@ -24,7 +24,7 @@ curl -i -X PUT -d \
 localhost:9090/api/v1/products
 ```
 
-Delete an exising product
+Delete a product by ID:
 ```
 curl -i -X DELETE -d \
 '{"id":"1"}' \
