@@ -24,17 +24,17 @@ public class GatewayApplicationTest {
     @Autowired
     private TestRestTemplate rest;
 
-    static ConfigurableApplicationContext bookService;
+    static ConfigurableApplicationContext productsService;
+    private static final String PRODUCT_BIKE = "{id: \"1\",name: \"Bike\",description: \"Brand: Gazelle \",price: \"100\"}";
 
     @BeforeAll
-    public static void startBookService() {
-        bookService = SpringApplication.run(BookService.class,
-                "--server.port=8090");
+    public static void startProductsService() {
+        productsService = SpringApplication.run(ProductService.class,"--server.port=9090");
     }
 
     @AfterAll
-    public static void closeBookService() {
-        bookService.close();
+    public static void closeProductsService() {
+        productsService.close();
     }
 
     @BeforeEach
@@ -44,17 +44,17 @@ public class GatewayApplicationTest {
 
     @Test
     public void test() {
-        String resp = rest.getForObject("/books/available", String.class);
-        assertThat(resp).isEqualTo("books");
+        String resp = rest.getForObject("/products", String.class);
+        assertThat(resp).isEqualTo(PRODUCT_BIKE);
     }
 
     @Configuration
     @EnableAutoConfiguration
     @RestController
-    static class BookService {
-        @RequestMapping("/available")
+    static class ProductService {
+        @RequestMapping("/api/v1/products")
         public String getAvailable() {
-            return "books";
+            return PRODUCT_BIKE;
         }
     }
 }
