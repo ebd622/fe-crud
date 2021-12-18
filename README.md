@@ -33,3 +33,9 @@ curl -i -X DELETE -d \
 '{"id":"1"}' \
 localhost:9090/api/v1/products
 ```
+
+## Gateway
+
+```
+curl -i localhost:8080/products
+```
