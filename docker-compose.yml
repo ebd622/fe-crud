@@ -1,0 +1,29 @@
+version: "3"
+services:
+  wiremock_demo:
+    container_name: wiremock_demo
+    image: rodolpheche/wiremock:2.25.1
+#    networks:
+#      - bridge
+#    environment:
+#      MYSQL_DATABASE: test
+#      MYSQL_ROOT_PASSWORD: hellokoding
+#      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - $PWD/product-api-mock:/home/wiremock
+    ports:
+      - "9090:8080"
+    restart: always
+
+  gateway:
+    container_name: gateway
+    image: ebd622/gateway-docker
+#    networks:
+#      - host
+    links:
+      - "wiremock_demo"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - wiremock_demo
+    restart: always
