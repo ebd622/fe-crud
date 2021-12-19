@@ -37,5 +37,9 @@ localhost:9090/api/v1/products
 ## Gateway
 
 ```
+java -jar target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
+```
+
+```
 curl -i localhost:8080/products
 ```
