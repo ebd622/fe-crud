@@ -6,7 +6,7 @@ This is [wiremock](http://wiremock.org/)-based stub for the FE-application.
 Run Wiremock:
 ```
 docker run --rm -d -p 9090:8080 -p 8443:8443 --name wiremock_demo \
-  -v $PWD/mock:/home/wiremock \
+  -v $PWD/product-api-mock:/home/wiremock \
   rodolpheche/wiremock:2.25.1
 ```
 
