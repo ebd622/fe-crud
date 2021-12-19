@@ -46,8 +46,9 @@ curl -i localhost:8080/products
 ```
 docker build -t ebd622/gateway-docker .
 ```
-
+```
 docker run --rm -d -p 8080:8080 --name gateway ebd622/gateway-docker
+```
 
 docker-compose up
 docker-compose down
