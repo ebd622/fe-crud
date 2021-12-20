@@ -1,7 +1,7 @@
 # fe-crud
 
 ## Product-API-mock
-This is [wiremock](http://wiremock.org/)-based stub for the FE-application.
+This is [wiremock](http://wiremock.org/)-based stub for the Product FE-application.
 
 Run Wiremock:
 ```
