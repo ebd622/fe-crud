@@ -57,3 +57,6 @@ docker-compose up
 ```
 docker-compose down
 ```
+
+## Resources
+https://spring.io/guides/gs/routing-and-filtering/
