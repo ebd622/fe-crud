@@ -41,7 +41,7 @@ Run a gateway:
 ```
 java -jar target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
 ```
-
+Hit a GET-request to the gateway:
 ```
 curl -i localhost:8080/products
 ```
