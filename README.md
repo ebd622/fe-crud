@@ -37,6 +37,7 @@ localhost:9090/api/v1/products
 ## Gateway
 It is a simple routing (reverse-proxy) based on Netflix Zuul edge service library.
 
+Run a gateway:
 ```
 java -jar target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
 ```
