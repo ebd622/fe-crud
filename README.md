@@ -45,6 +45,7 @@ Hit a GET-request to the gateway:
 ```
 curl -i localhost:8080/products
 ```
+Create a Docker image:
 ```
 docker build -t ebd622/gateway-docker .
 ```
