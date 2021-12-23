@@ -41,7 +41,7 @@ There are different ways to run the gateway:
 - Run a jar-file;
 - Run in a container
 
-Run a gateway:
+### Run a jar:
 ```
 java -jar target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
 ```
