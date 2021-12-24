@@ -58,6 +58,7 @@ Run a container:
 ```
 docker run --rm -d -p 8080:8080 --name gateway ebd622/gateway-docker
 ```
+### Use a docker-compose
 ```
 docker-compose up
 ```
