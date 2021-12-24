@@ -50,10 +50,11 @@ Hit a GET-request to the gateway:
 curl -i localhost:8080/products
 ```
 ### Run a docker container
-Build a Docker image:
+Build a docker image:
 ```
 docker build -t ebd622/gateway-docker .
 ```
+Run a container:
 ```
 docker run --rm -d -p 8080:8080 --name gateway ebd622/gateway-docker
 ```
