@@ -76,6 +76,12 @@ ff02::2	ip6-allrouters
 172.17.0.3	b29203928178
 ```
 
+
+```
+curl -i localhost:8080/products
+```
+
+
 ## Run both with a docker-compose
 ```
 docker-compose up
