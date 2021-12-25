@@ -11,8 +11,8 @@ services:
 #      MYSQL_ROOT_HOST: '%'
     volumes:
       - $PWD/product-api-mock:/home/wiremock
-    ports:
-      - "9090:8080"
+#    ports:
+#      - "9090:8080"
     restart: always
 
   gateway:
@@ -21,9 +21,9 @@ services:
 #    networks:
 #      - host
     links:
-      - "wiremock_demo"
+      - wiremock_demo:wiremock_host
     ports:
-      - "8080:8080"
+      - 8080:8080
     depends_on:
       - wiremock_demo
     restart: always
