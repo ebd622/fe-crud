@@ -58,7 +58,7 @@ Run a container:
 ```
 docker run --rm -d -p 8080:8080 --name gateway ebd622/gateway-docker
 ```
-### Use a docker-compose
+## Run both with a docker-compose
 ```
 docker-compose up
 ```
@@ -66,6 +66,8 @@ docker-compose up
 ```
 docker-compose down
 ```
+
+
 
 ## Resources
 https://spring.io/guides/gs/routing-and-filtering/
