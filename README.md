@@ -61,7 +61,10 @@ docker run --rm -d -p 8080:8080 --link wiremock_demo:wiremock_host --name gatewa
 ```
 This will create and run the container `gateway`. This will also link `gateway` to the container 'wiremock_demo'. 
 
-The option `--link wiremock_demo:wiremock_host` will create a host `wiremock_host` and will map the container `wiremock_demo` to the host.
+The option `--link wiremock_demo:wiremock_host` will create a host `wiremock_host` and will map the container `wiremock_demo` to the host. We can see this when look into `/etc/hosts` in the container `gateway`:
+```
+
+```
 
 ## Run both with a docker-compose
 ```
