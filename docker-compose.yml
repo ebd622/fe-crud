@@ -7,8 +7,6 @@ services:
 #      - bridge
     environment:
       WIREMOCK_HOST_NAME: wiremock_host
-#      MYSQL_ROOT_PASSWORD: hellokoding
-#      MYSQL_ROOT_HOST: '%'
     volumes:
       - $PWD/product-api-mock:/home/wiremock
 #    ports:
