@@ -5,8 +5,8 @@ services:
     image: rodolpheche/wiremock:2.25.1
 #    networks:
 #      - bridge
-#    environment:
-#      MYSQL_DATABASE: test
+    environment:
+      WIREMOCK_HOST_NAME: wiremock_host
 #      MYSQL_ROOT_PASSWORD: hellokoding
 #      MYSQL_ROOT_HOST: '%'
     volumes:
@@ -17,7 +17,8 @@ services:
 
   gateway:
     container_name: gateway
-    image: ebd622/gateway-docker
+#    image: ebd622/gateway-docker
+    build: ./gateway
 #    networks:
 #      - host
     links:
