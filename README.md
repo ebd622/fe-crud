@@ -76,7 +76,7 @@ ff02::2	ip6-allrouters
 172.17.0.3	b29203928178
 ```
 
-
+Run `curl`on a docker-host to make sure that `gateway` is up and running:
 ```
 curl -i localhost:8080/products
 ```
