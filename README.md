@@ -83,6 +83,7 @@ curl -i localhost:8080/products
 
 
 ## Run both with a docker-compose
+It is also possible to run both with docker-compose command:
 ```
 docker-compose up
 ```
