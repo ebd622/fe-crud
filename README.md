@@ -83,7 +83,9 @@ curl -i localhost:8080/products
 
 
 ## Run both servises with a docker-compose
-It is also possible to run both `mock` and `gateway` with docker-compose command:
+It is also possible to run both `mock` and `gateway` with docker-compose command.
+
+Build and run contatiners:
 ```
 docker-compose up -d
 ```
