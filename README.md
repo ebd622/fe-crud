@@ -89,7 +89,7 @@ Build and run contatiners:
 ```
 docker-compose up -d
 ```
-
+Stop containers:
 ```
 docker-compose down
 ```
