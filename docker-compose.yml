@@ -19,8 +19,6 @@ services:
 #    image: ebd622/gateway-docker
 #   --- Use [build:] to create an image
     build: ./gateway
-#    networks:
-#      - host
     links:
       - wiremock_demo:wiremock_host
     ports:
