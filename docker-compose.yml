@@ -9,8 +9,6 @@ services:
       WIREMOCK_HOST_NAME: wiremock_host
     volumes:
       - $PWD/product-api-mock:/home/wiremock
-#    ports:
-#      - "9090:8080"
     restart: always
 
   gateway:
