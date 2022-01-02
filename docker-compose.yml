@@ -13,7 +13,7 @@ services:
 
   gateway:
     container_name: gateway
-#   --- Uncomment [image:] to use an existing image
+#   --- Use [image:] to use an existing image
 #    image: ebd622/gateway-docker
 #   --- Use [build:] to create an image
     build: ./gateway
