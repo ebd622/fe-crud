@@ -15,7 +15,7 @@ services:
     container_name: gateway
 #   --- Use [image:] to create a container from an existing image
 #    image: ebd622/gateway-docker
-#   --- Use [build:] to create an image
+#   --- Use [build:] first to buid a new image
     build: ./gateway
     links:
       - wiremock_demo:wiremock_host
