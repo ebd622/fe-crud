@@ -5,7 +5,16 @@
     "bodyPatterns": [
       {
         "matchesJsonPath": "$[?(@.['id'] =~ /-?(\\p{L})/)]"
-      }
+      },
+      {
+        "matchesJsonPath": "$[?(@.['name'] =~ /[A-Za-z0-9_-]+/)]"
+      },
+      {
+        "matchesJsonPath": "$[?(@.['description'] =~ /-?(.+)/)]"
+      },
+      {
+        "matchesJsonPath": "$[?(@.['price'] =~ /[A-Za-z0-9_-]+/)]"
+      }    
     ]
   },
   "response": {
