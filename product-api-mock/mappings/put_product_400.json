@@ -20,7 +20,7 @@
   "response": {
     "status": 400,
     "jsonBody": {
-      "id": "missed"
+      "Error": "Wrong Id"
     },
     "headers": {
       "Content-Type": "application/json"
