@@ -9,12 +9,9 @@
     ]
   },
   "response": {
-    "status": 200,
+    "status": 400,
     "jsonBody": {
-      "id": "1",
-      "name": "bike",
-      "description": "Brand: Gazelle",
-      "price": "100"
+      "id": "missed"
     },
     "headers": {
       "Content-Type": "application/json"
