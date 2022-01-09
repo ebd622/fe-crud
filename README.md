@@ -28,6 +28,9 @@ localhost:9090/api/v1/products
 ```
 Bad request: id is not correct
 ```
+curl -i -X PUT -d \
+'{"id":"abc","name":"bike","description":"Brand: Gazelle","price":"100"}' \
+localhost:9090/api/v1/products
 ```
 
 Delete a product by ID:
