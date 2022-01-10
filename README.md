@@ -10,6 +10,7 @@ docker run --rm -d -p 9090:8080 -p 8443:8443 --name wiremock_demo \
   rodolpheche/wiremock:2.25.1
 ```
 
+### Happy flows
 Get all products
 ```
 curl -i localhost:9090/api/v1/products
