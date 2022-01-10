@@ -40,6 +40,7 @@ curl -i -X DELETE -d \
 '{"id":"1"}' \
 localhost:9090/api/v1/products
 ```
+### Errors
 
 ## Gateway
 It is a simple routing (reverse-proxy) based on Netflix Zuul edge service library.
