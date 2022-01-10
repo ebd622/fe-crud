@@ -27,12 +27,6 @@ curl -i -X PUT -d \
 '{"id":"1","name":"bike","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
-Bad request: id is not correct
-```
-curl -i -X PUT -d \
-'{"id":"abc","name":"bike","description":"Brand: Gazelle","price":"100"}' \
-localhost:9090/api/v1/products
-```
 
 Delete a product by ID:
 ```
@@ -41,6 +35,13 @@ curl -i -X DELETE -d \
 localhost:9090/api/v1/products
 ```
 ### Errors
+Bad request: id is not correct
+```
+curl -i -X PUT -d \
+'{"id":"abc","name":"bike","description":"Brand: Gazelle","price":"100"}' \
+localhost:9090/api/v1/products
+```
+
 
 ## Gateway
 It is a simple routing (reverse-proxy) based on Netflix Zuul edge service library.
