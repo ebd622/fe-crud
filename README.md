@@ -42,6 +42,8 @@ curl -i -X PUT -d \
 localhost:9090/api/v1/products
 ```
 
+Server error 
+
 
 ## Gateway
 It is a simple routing (reverse-proxy) based on Netflix Zuul edge service library.
