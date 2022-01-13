@@ -43,10 +43,10 @@ localhost:9090/api/v1/products
 ```
 
 Server error 
-
+TODO
 
 Time out  
-
+TODO
 
 ## Gateway
 It is a simple routing (reverse-proxy) based on Netflix Zuul edge service library.
