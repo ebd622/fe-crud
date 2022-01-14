@@ -50,7 +50,12 @@ localhost:9090/api/v1/products
 ```
 TODO: use headers?
 
-Time out  
+Time out
+```
+curl -i -X PUT -d \
+'{"id":"111","name":"bike","description":"Brand: Gazelle","price":"100"}' \
+localhost:9090/api/v1/products
+```
 TODO
 
 ## Gateway
