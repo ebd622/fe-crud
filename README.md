@@ -50,7 +50,7 @@ localhost:9090/api/v1/products
 Server error 
 ```
 curl -i -X POST -d \
-'{"name":"bike","description":"Brand: Gazelle","price":"100"}' \
+'{"name":"error","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
 TODO: use headers?
