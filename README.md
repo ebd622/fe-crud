@@ -49,7 +49,7 @@ localhost:9090/api/v1/products
 
 Server error 
 ```
-curl -i -X POST -d \                                                                                                                                          burdoy@Eugenys-MacBook-Pro
+curl -i -X POST -d \                                                                                                                                          
 '{"name":"error","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
