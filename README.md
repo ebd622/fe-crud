@@ -9,7 +9,12 @@ docker run --rm -d -p 9090:8080 -p 8443:8443 --name wiremock_demo \
   -v $PWD/product-api-mock:/home/wiremock \
   rodolpheche/wiremock:2.25.1
 ```
-
+or
+```
+docker run --rm  -d -p 9090:8080 -p 8443:8443 --name wiremock_demo \
+  -v $PWD/product-api-mock:/home/wiremock \
+  wiremock/wiremock
+```
 ### Happy flows
 Get all products
 ```
