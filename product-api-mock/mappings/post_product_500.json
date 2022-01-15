@@ -4,19 +4,21 @@
     "urlPath": "/api/v1/products",
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.['name'] == 'bike')]"
+        "matchesJsonPath": "$[?(@.['name'] == 'error')]"
       },
       {
         "matchesJsonPath": "$[?(@.['description'] =~ /-?(.+)/)]"
       },
       {
         "matchesJsonPath": "$[?(@.['price'] =~ /[A-Za-z0-9_-]+/)]"
-      }    
+      }
     ]
   },
   "response": {
-    "status": 201,
-    "bodyFileName": "post_product_response.json",
+    "status": 500,
+    "jsonBody": {
+      "Error": "Server Error"
+    },
     "headers": {
       "Content-Type": "application/json"
     }
