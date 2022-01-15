@@ -4,7 +4,7 @@
     "urlPath": "/api/v1/products",
     "bodyPatterns": [
       {
-        "matchesJsonPath": "$[?(@.['name'] == 'error')]"
+        "matchesJsonPath": "$[?(@.['name'] == 'bike-error')]"
       },
       {
         "matchesJsonPath": "$[?(@.['description'] =~ /-?(.+)/)]"
