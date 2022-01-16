@@ -53,7 +53,6 @@ curl -i -X POST -d \
 '{"name":"bike-error","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
-TODO: use headers?
 
 Time out
 ```
