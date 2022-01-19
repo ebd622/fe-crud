@@ -17,7 +17,7 @@ docker run --rm  -d -p 9090:8080 -p 8443:8443 --name wiremock_demo \
 ```
 In both cases a docker container will be created and run. The only difference is a docker image. 
 
-In the second case use wiremock-docker.
+In the second case use [wiremock-docker](https://github.com/wiremock/wiremock-docker).
 
 
 https://github.com/wiremock/wiremock-docker
