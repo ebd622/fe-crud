@@ -19,10 +19,6 @@ In both cases a docker container will be created and run. The only difference is
 
 In the second case use [wiremock-docker](https://github.com/wiremock/wiremock-docker).
 
-
-https://github.com/wiremock/wiremock-docker
-
-
 ### Happy flows
 Get all products
 ```
