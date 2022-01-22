@@ -15,10 +15,9 @@
     ]
   },
   "response": {
-    "status": 500,
-    "jsonBody": {
-      "Error": "Server Error"
-    },
+    "status": 201,
+    "bodyFileName": "post_product_response.json",
+    "fixedDelayMilliseconds": 5000,
     "headers": {
       "Content-Type": "application/json"
     }
