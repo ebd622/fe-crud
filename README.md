@@ -60,8 +60,8 @@ localhost:9090/api/v1/products
 
 Time out
 ```
-curl -i -X PUT -d \
-'{"id":"111","name":"bike","description":"Brand: Gazelle","price":"100"}' \
+curl -i -X POST -d \
+'{"name":"bike-timeout","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
 TODO
