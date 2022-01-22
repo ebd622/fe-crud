@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/v1/products",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.['name'] == 'bike-error')]"
+      },
+      {
+        "matchesJsonPath": "$[?(@.['description'] =~ /-?(.+)/)]"
+      },
+      {
+        "matchesJsonPath": "$[?(@.['price'] =~ /[A-Za-z0-9_-]+/)]"
+      }
+    ]
+  },
+  "response": {
+    "status": 500,
+    "jsonBody": {
+      "Error": "Server Error"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
