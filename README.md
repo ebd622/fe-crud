@@ -64,7 +64,6 @@ curl -i -X POST -d \
 '{"name":"bike-timeout","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
-TODO
 
 ## Gateway
 It is a simple routing (reverse-proxy) based on Netflix Zuul edge service library.
