@@ -66,7 +66,7 @@ localhost:9090/api/v1/products
 ```
 
 ## Gateway
-It is a simple routing (reverse-proxy) based on Netflix Zuul edge service library.
+It is a simple routing (reverse-proxy) based on [Netflix Zuul] (https://github.com/Netflix/zuul) edge service library.
 
 There are different ways to run the gateway:
 - Run a jar-file;
