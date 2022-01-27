@@ -128,6 +128,6 @@ docker-compose down
 
 
 ## Resources
-https://spring.io/guides/gs/routing-and-filtering/
+* Routing and Filtering https://spring.io/guides/gs/routing-and-filtering/
 
-https://github.com/Netflix/zuul
+* https://github.com/Netflix/zuul
