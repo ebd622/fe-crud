@@ -130,4 +130,4 @@ docker-compose down
 ## Resources
 * [Routing and Filtering](https://spring.io/guides/gs/routing-and-filtering/)
 
-* https://github.com/Netflix/zuul
+* Netflix Zuul https://github.com/Netflix/zuul
