@@ -8,6 +8,17 @@ ng new crud-app --no-strict
 ### Run the server
 ng serve
 
+
+npm install --save bootstrap@3
+
+ng generate component product
+
+ng g c product
+
+ng g c manage-product
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
