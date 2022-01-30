@@ -1,27 +1,30 @@
 <div class="container">
+
   <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
       <h2>I am here</h2>
-      <app-manage-product></app-manage-product>
+        <app-manage-product></app-manage-product>
       <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <div class="col-sm-3">Name</div>
+            <div class="col-sm-3">Description</div>
+            <div class="col-sm-3">Price</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
       <app-product
         *ngFor="let prod of products; let i = index"
         [product]="prod"
         [id]="i"></app-product>
     </div>
   </div>
-  
-  <div class="row">
-    <div class="col-md-offset-2 col-sm-2">
-      One of three columns
-    </div>
-    <div class="col-sm-2">
-      One of three columns
-    </div>
-    <div class="col-sm-2">
-      One of three columns
-    </div>
-  </div>
+
 </div>
 
 <!--<input type="text" [(ngModel)]="name">-->
