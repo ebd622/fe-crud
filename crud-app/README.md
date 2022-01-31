@@ -8,7 +8,10 @@ ng new crud-app --no-strict
 ```
 
 ### Run the server
+```
 ng serve
+```
+By default the server will be running on the port `4200`.
 
 ### Install Bootstrup CSS
 npm install --save bootstrap@3
