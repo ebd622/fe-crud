@@ -10,7 +10,7 @@ ng new crud-app --no-strict
 ### Run the server
 ng serve
 
-
+### Install Bootstrup CSS
 npm install --save bootstrap@3
 
 ng generate component product
