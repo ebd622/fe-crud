@@ -3,7 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
 ### Create an app
+```
 ng new crud-app --no-strict
+```
 
 ### Run the server
 ng serve
