@@ -23,6 +23,7 @@ ng generate component product
 
 ng g c product
 
+### Create a new component `manage-product`
 ng g c manage-product
 
 
