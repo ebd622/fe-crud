@@ -21,6 +21,7 @@ npm install --save bootstrap@3
 ```
 ng generate component product
 ```
+or
 ```
 ng g c product
 ```
