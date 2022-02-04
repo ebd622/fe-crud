@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Set up the application
 The following steps have been done to set up the application
 
-### Create the `crud-app`
+### Create the app
 ```
 ng new crud-app --no-strict
 ```
