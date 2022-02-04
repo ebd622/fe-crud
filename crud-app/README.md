@@ -2,7 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
-### Create an app
+## Set up the application
+The following steps have been done to set up the application
+
+
 ```
 ng new crud-app --no-strict
 ```
