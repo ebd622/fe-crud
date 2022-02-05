@@ -21,4 +21,10 @@ export class ProductService {
     }
   ];
   constructor(private logginService: LoggingService){}
+
+  addProduct(name: string, description: string, price: string){
+    this.products.push({name: name, description: description, price: price});
+    this.logginService.logStatusChange(name);
+  }
+
 }
