@@ -27,4 +27,7 @@ export class ProductService {
     this.logginService.logStatusChange(name);
   }
 
+  deleteProduct(id: number) {
+    delete this.products[id];
+  }
 }
