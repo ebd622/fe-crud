@@ -9,7 +9,7 @@ export class ProductComponent {
   @Input() product: {name: string, description: string, price: string};
   @Input() id: number;
 
-  onDeleteProduct(product: { name: string; description: string; price: string }) {
-    
+  onDeleteProduct(product: {name: string; description: string; price: string}) {
+
   }
 }
