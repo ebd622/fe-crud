@@ -17,6 +17,6 @@ export class ProductComponent {
   }
 
   onUpdateProduct(product: { name: string; description: string; price: string }) {
-    //TODO
+    //TODO: update by Id?
   }
 }
