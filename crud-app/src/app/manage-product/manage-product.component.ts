@@ -15,6 +15,6 @@ export class ManageProductComponent implements OnInit {
 
   onAddProduct(value: string, desctiption: string, price: string, status: string) {
     this.productService.addProduct(value, desctiption, price);
-    
+
   }
 }
