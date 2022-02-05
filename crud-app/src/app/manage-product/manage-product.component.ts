@@ -12,4 +12,7 @@ export class ManageProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onAddProduct(value: string, value2: string, value3: string, value4: string) {
+    
+  }
 }
