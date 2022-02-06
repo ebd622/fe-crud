@@ -25,6 +25,7 @@ export class ManageProductComponent implements OnInit {
 
   onAddProduct(name: string, desctiption: string, price: string, status: string) {
     this.productService.addProduct(name, desctiption, price);
+    this.loggingService.logMessage('manage-component: onAddProduct(...)');
     //TODO: use status later
 
   }
