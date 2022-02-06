@@ -9,14 +9,14 @@ import {LoggingService} from "../logging.service";
 })
 export class ManageProductComponent implements OnInit {
 
-  constructor(private productService: ProductService, private logginService: LoggingService) {
+  constructor(private productService: ProductService, private loggingService: LoggingService) {
     // this.productService.productUpdated.subscribe(
     //   (action: string) => alert('Action: ' + action)
     // );
   }
 
   ngOnInit(): void {
-    this.logginService.logMessage('manage-component: ngOnInit()');
+    this.loggingService.logMessage('manage-component: ngOnInit()');
     this.productService.productUpdated.subscribe(
       (action: string) => alert('Action: ' + action)
     );
@@ -30,7 +30,7 @@ export class ManageProductComponent implements OnInit {
   }
 
   getNumberOfProducts(): number {
-    this.logginService.logMessage('manage-component: getNumberOfProducts');
+    this.loggingService.logMessage('manage-component: getNumberOfProducts');
     return this.productService.products.length;
   }
 }
