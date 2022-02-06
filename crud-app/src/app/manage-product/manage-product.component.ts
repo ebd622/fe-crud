@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from "../product-service";
+import {LoggingService} from "../logging.service";
 
 @Component({
   selector: 'app-manage-product',
@@ -8,13 +9,14 @@ import {ProductService} from "../product-service";
 })
 export class ManageProductComponent implements OnInit {
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService, private logginService: LoggingService) {
     // this.productService.productUpdated.subscribe(
     //   (action: string) => alert('Action: ' + action)
     // );
   }
 
   ngOnInit(): void {
+    this.logginService.logMessage('manage-component: ngOnInit()');
     this.productService.productUpdated.subscribe(
       (action: string) => alert('Action: ' + action)
     );
@@ -27,7 +29,8 @@ export class ManageProductComponent implements OnInit {
 
   }
 
-  getNumberOfProducts(){
+  getNumberOfProducts(): number {
+    this.logginService.logMessage('manage-component: getNumberOfProducts');
     return this.productService.products.length;
   }
 }
