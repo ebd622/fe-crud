@@ -10,10 +10,11 @@ export class ProductComponent {
   @Input() product: {name: string, description: string, price: string};
   @Input() id: number;
 
-  constructor(private produsctService: ProductService) {}
+  constructor(private productService: ProductService) {}
 
   onDeleteProduct() {
-    this.produsctService.deleteProduct(this.id);
+    this.productService.deleteProduct(this.id);
+    this.productService.productUpdated.emit("deleted");
   }
 
   onUpdateProduct(product: { name: string; description: string; price: string }) {
