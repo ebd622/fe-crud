@@ -18,4 +18,8 @@ export class ManageProductComponent implements OnInit {
     //TODO: use status later
 
   }
+
+  getNumberOfProducts(){
+    return this.productService.products.length;
+  }
 }
