@@ -31,6 +31,7 @@ export class ProductService {
   }
 
   deleteProduct(id: number) {
-    delete this.products[id];
+    this.products.splice(id, 1);
+    //delete this.products[id];
   }
 }
