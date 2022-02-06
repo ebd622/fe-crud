@@ -1,7 +1,7 @@
-import {Injectable} from "@angular/core";
 import {LoggingService} from "./logging.service";
+import {EventEmitter, Injectable} from '@angular/core';
 
-@Injectable()
+@Injectable() /*This means that something will be injected into the service (in our case "LogginService")*/
 export class ProductService {
   products = [
     {
@@ -21,6 +21,9 @@ export class ProductService {
     }
   ];
   constructor(private logginService: LoggingService){}
+
+  //Add an event to enable 'cross-component communication'
+  productUpdated = new EventEmitter<string>();
 
   addProduct(name: string, description: string, price: string){
     this.products.push({name: name, description: description, price: price});
