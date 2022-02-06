@@ -9,12 +9,16 @@ import {ProductService} from "../product-service";
 export class ManageProductComponent implements OnInit {
 
   constructor(private productService: ProductService) {
-    this.productService.productUpdated.subscribe(
-      (action: string) => alert('Action: ' + action)
-    );
+    // this.productService.productUpdated.subscribe(
+    //   (action: string) => alert('Action: ' + action)
+    // );
   }
 
   ngOnInit(): void {
+    this.productService.productUpdated.subscribe(
+      (action: string) => alert('Action: ' + action)
+    );
+
   }
 
   onAddProduct(name: string, desctiption: string, price: string, status: string) {
