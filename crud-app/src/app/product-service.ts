@@ -24,7 +24,7 @@ export class ProductService {
 
   addProduct(name: string, description: string, price: string){
     this.products.push({name: name, description: description, price: price});
-    this.logginService.logStatusChange(name);
+    this.logginService.logMessage('Add new product: ' + name);
   }
 
   deleteProduct(id: number) {
