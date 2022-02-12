@@ -113,6 +113,9 @@ curl -i localhost:8080/products
 ```
 ## crud-app
 
+docker build -t ebd622/crud-app-docker .
+docker run -d -p 8080:80 ebd622/crud-app-docker:latest
+
 
 ## Run both servises with a docker-compose
 It is also possible to run both `mock` and `gateway` with docker-compose command.
