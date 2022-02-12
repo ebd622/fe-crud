@@ -75,7 +75,7 @@ There are different ways to run the gateway:
 (Before running a `gateway` make sure that `wiremock_demo` container is up and running)
 ### Run a jar:
 ```
-java -jar target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
+java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
 ```
 Hit a GET-request to the gateway:
 ```
