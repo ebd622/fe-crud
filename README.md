@@ -134,4 +134,4 @@ docker-compose down
 ## Resources
 * [Routing and Filtering](https://spring.io/guides/gs/routing-and-filtering/)
 * [Netflix Zuul](https://github.com/Netflix/zuul)
-* https://www.indellient.com/blog/how-to-dockerize-an-angular-application-with-nginx/
+* [How To Dockerize an Angular Application with Nginx](https://www.indellient.com/blog/how-to-dockerize-an-angular-application-with-nginx)
