@@ -112,7 +112,7 @@ Run `curl`on a docker-host to make sure that `gateway` is up and running:
 curl -i localhost:8080/products
 ```
 ## crud-app
-The Angular app can be dockerzed and run in a container.
+The Angular app can be dockerzed and run in a container. Here are some steps how to do this.
 
 ```
 docker build -t ebd622/crud-app-docker .
