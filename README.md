@@ -118,6 +118,7 @@ Create an image:
 ```
 docker build -t ebd622/crud-app-docker .
 ```
+Run created image in a container:
 ```
 docker run -d -p 8080:80 ebd622/crud-app-docker:latest
 ```
