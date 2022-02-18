@@ -114,6 +114,7 @@ curl -i localhost:8080/products
 ## crud-app
 The Angular app can be dockerzed and run in a container. Here are some steps how to do this.
 
+Create an image:
 ```
 docker build -t ebd622/crud-app-docker .
 ```
