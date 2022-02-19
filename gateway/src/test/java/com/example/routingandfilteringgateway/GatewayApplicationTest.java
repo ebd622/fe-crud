@@ -29,7 +29,7 @@ public class GatewayApplicationTest {
 
     @BeforeAll
     public static void startProductsService() {
-        productsService = SpringApplication.run(ProductService.class,"--server.port=9090");
+        productsService = SpringApplication.run(ProductService.class,"--server.port=9099");
     }
 
     @AfterAll
