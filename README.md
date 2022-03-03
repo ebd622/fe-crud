@@ -1,7 +1,7 @@
 # fe-crud
 
 ## TOC
-* Product-API-mock
+* [Product-API-mock] (https://github.com/ebd622/fe-crud#product-api-mock)
 * Gateway
 * crud-app
 
