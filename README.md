@@ -4,6 +4,7 @@
 * [Product-API-mock](https://github.com/ebd622/fe-crud#product-api-mock)
 * [Gateway](https://github.com/ebd622/fe-crud/blob/main/README.md#gateway)
 * [crud-app](#crud-app)
+* Run both servises with a docker-compose
 
 ## Product-API-mock
 This is [wiremock](http://wiremock.org/)-based stub for the Product FE-application.
