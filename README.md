@@ -5,6 +5,7 @@
    * [Happy flows](https://github.com/ebd622/fe-crud/blob/main/README.md#happy-flows)
    * [Errors](https://github.com/ebd622/fe-crud/blob/main/README.md#errors)
 * [Gateway](https://github.com/ebd622/fe-crud/blob/main/README.md#gateway)
+   * [Run a jar]()
 * [crud-app](#crud-app)
 * [Run both servises with a docker-compose](https://github.com/ebd622/fe-crud#run-both-servises-with-a-docker-compose)
 
@@ -81,7 +82,7 @@ There are different ways to run the gateway:
 - Run in a container
 
 (Before running a `gateway` make sure that `wiremock_demo` container is up and running)
-### Run a jar:
+### Run a jar
 ```
 java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
 ```
