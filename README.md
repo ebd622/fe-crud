@@ -5,7 +5,7 @@
    * [Happy flows](https://github.com/ebd622/fe-crud/blob/main/README.md#happy-flows)
    * [Errors](https://github.com/ebd622/fe-crud/blob/main/README.md#errors)
 * [Gateway](https://github.com/ebd622/fe-crud/blob/main/README.md#gateway)
-   * [Run a jar]()
+   * [Run a jar](https://github.com/ebd622/fe-crud/blob/main/README.md#run-a-jar)
 * [crud-app](#crud-app)
 * [Run both servises with a docker-compose](https://github.com/ebd622/fe-crud#run-both-servises-with-a-docker-compose)
 
