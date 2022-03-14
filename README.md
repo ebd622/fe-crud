@@ -9,6 +9,7 @@
    * [Run in a docker container](https://github.com/ebd622/fe-crud/blob/main/README.md#run-in-a-docker-container)
 * [crud-app](#crud-app)
 * [Run both servises with a docker-compose](https://github.com/ebd622/fe-crud#run-both-servises-with-a-docker-compose)
+* [Resources]()
 
 ## Product-API-mock
 This is [wiremock](http://wiremock.org/)-based stub for the Product FE-application.
