@@ -4,7 +4,7 @@
 * [Product-API-mock](#product-api-mock)
    * [Happy flows](https://github.com/ebd622/fe-crud/blob/main/README.md#happy-flows)
    * [Errors](https://github.com/ebd622/fe-crud/blob/main/README.md#errors)
-* [Gateway](https://github.com/ebd622/fe-crud/blob/main/README.md#gateway)
+* [Gateway](#gateway)
    * [Run a jar](https://github.com/ebd622/fe-crud/blob/main/README.md#run-a-jar)
    * [Run in a docker container](https://github.com/ebd622/fe-crud/blob/main/README.md#run-in-a-docker-container)
 * [crud-app](#crud-app)
