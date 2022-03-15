@@ -1,7 +1,7 @@
 # fe-crud
 
 ## TOC
-* [Product-API-mock](https://github.com/ebd622/fe-crud#product-api-mock)
+* [Product-API-mock](#product-api-mock)
    * [Happy flows](https://github.com/ebd622/fe-crud/blob/main/README.md#happy-flows)
    * [Errors](https://github.com/ebd622/fe-crud/blob/main/README.md#errors)
 * [Gateway](https://github.com/ebd622/fe-crud/blob/main/README.md#gateway)
