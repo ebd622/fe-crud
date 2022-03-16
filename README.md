@@ -2,7 +2,7 @@
 
 ## TOC
 * [Product-API-mock](#product-api-mock)
-   * [Happy flows](README.md#happy-flows)
+   * [Happy flows](#happy-flows)
    * [Errors](https://github.com/ebd622/fe-crud/blob/main/README.md#errors)
 * [Gateway](#gateway)
    * [Run a jar](https://github.com/ebd622/fe-crud/blob/main/README.md#run-a-jar)
