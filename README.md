@@ -8,7 +8,7 @@
    * [Run a jar](https://github.com/ebd622/fe-crud/blob/main/README.md#run-a-jar)
    * [Run in a docker container](https://github.com/ebd622/fe-crud/blob/main/README.md#run-in-a-docker-container)
 * [crud-app](#crud-app)
-* [Run both servises with a docker-compose](https://github.com/ebd622/fe-crud#run-both-servises-with-a-docker-compose)
+* [Run both servises with a docker-compose](fe-crud#run-both-servises-with-a-docker-compose)
 * [Resources](#resources)
 
 ## Product-API-mock
