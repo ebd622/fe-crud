@@ -1,5 +1,16 @@
 # fe-crud
 
+## TOC
+* [Product-API-mock](#product-api-mock)
+   * [Happy flows](#happy-flows)
+   * [Errors](#errors)
+* [Gateway](#gateway)
+   * [Run a jar](https://github.com/ebd622/fe-crud/blob/main/README.md#run-a-jar)
+   * [Run in a docker container](https://github.com/ebd622/fe-crud/blob/main/README.md#run-in-a-docker-container)
+* [crud-app](#crud-app)
+* [Run both servises with a docker-compose](#run-both-servises-with-a-docker-compose)
+* [Resources](#resources)
+
 ## Product-API-mock
 This is [wiremock](http://wiremock.org/)-based stub for the Product FE-application.
 
@@ -73,7 +84,7 @@ There are different ways to run the gateway:
 - Run in a container
 
 (Before running a `gateway` make sure that `wiremock_demo` container is up and running)
-### Run a jar:
+### Run a jar
 ```
 java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
 ```
