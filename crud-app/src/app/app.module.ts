@@ -6,7 +6,11 @@ import { ProductComponent } from './product/product.component';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import {ProductService} from "./product-service";
 import {LoggingService} from "./logging.service";
+import {RouterModule, Routes} from "@angular/router";
 
+const appRoute: Routes = [
+  {path: 'v1', component: AppComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +19,8 @@ import {LoggingService} from "./logging.service";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoute)
   ],
   providers: [ProductService, LoggingService],
   bootstrap: [AppComponent]
