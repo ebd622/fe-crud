@@ -2,7 +2,7 @@ zuul:
   routes:
     api:
       path: /products
-      url: http://${HOST}:9090/api/v1/
+      url: http://${API_HOST}:9090/api/v1/
     app:
       path: /**
       url: http://localhost:4200
