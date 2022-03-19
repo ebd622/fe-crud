@@ -1,0 +1,8 @@
+zuul:
+  routes:
+    api:
+      path: /products
+      url: http://localhost:9090/api/v1/
+    app:
+      path: /**
+      url: http://localhost:4200
