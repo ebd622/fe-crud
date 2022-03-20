@@ -49,7 +49,7 @@ export class ProductService {
       }
       ))
       .subscribe(prodArray => {
-        // [prodArray] is a returned [tmpProdArray]
+        // [prodArray] is the same as a returned [tmpProdArray]
         this.logginService.logMessage('---> products: ' + prodArray);
         for(const key in prodArray){
           this.products.push({
