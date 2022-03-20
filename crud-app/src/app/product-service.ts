@@ -6,7 +6,7 @@ import {Product} from "./product.model";
 
 @Injectable() /*This means that something will be injected into the service (in our case "LogginService")*/
 export class ProductService {
-  products = [
+  products: Product[] = [
     {
       name: 'Bike',
       description: 'Gazelle',
@@ -35,6 +35,7 @@ export class ProductService {
 
   deleteProduct(id: number) {
     this.products.splice(id, 1);
+    this.logginService.logMessage('Delete Id: ' + id);
     //delete this.products[id];
   }
 
@@ -50,8 +51,9 @@ export class ProductService {
           return prodArray;
       }
       ))
-      .subscribe(products => {
-        this.logginService.logMessage('---> products: ' + products);
+      .subscribe(productsArray => {
+        this.logginService.logMessage('---> products: ' + productsArray);
+        //this.products = productsArray;
       })
   }
 
