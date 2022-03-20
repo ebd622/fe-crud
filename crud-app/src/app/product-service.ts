@@ -44,16 +44,29 @@ export class ProductService {
     this.http
       .get<Product>('http://localhost:8080/products')
       .pipe(map(responseData => {
-          const prodArray: Product[] = [];
+          // here [tmpProdArray] just an example of using [pipe:] and operator [map]
+          const tmpProdArray: Product[] = [];
           for(const key in responseData){
-            prodArray.push({name: responseData[key].name, description: responseData[key].description, price: responseData[key].price});
+            tmpProdArray.push({
+              name: responseData[key].name,
+              description: responseData[key].description,
+              price: responseData[key].price,
+              id: responseData[key].id
+            });
           }
-          return prodArray;
+          return tmpProdArray;
       }
       ))
-      .subscribe(productsArray => {
-        this.logginService.logMessage('---> products: ' + productsArray);
-        //this.products = productsArray;
+      .subscribe(prodArray => {
+        // [prodArray] is a returned [tmpProdArray]
+        this.logginService.logMessage('---> products: ' + prodArray);
+        for(const key in prodArray){
+          this.products.push({
+            name: prodArray[key].name,
+            description: prodArray[key].description,
+            price: prodArray[key].price
+          });
+        }
       })
   }
 
