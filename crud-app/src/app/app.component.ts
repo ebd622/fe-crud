@@ -15,5 +15,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.products = this.productService.products;
+    this.productService.fetchProducts();
   }
 }

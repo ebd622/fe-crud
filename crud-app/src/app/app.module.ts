@@ -7,6 +7,7 @@ import { ManageProductComponent } from './manage-product/manage-product.componen
 import {ProductService} from "./product-service";
 import {LoggingService} from "./logging.service";
 import {RouterModule, Routes} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
 
 const appRoute: Routes = [
   //Add routing (just as an example)
@@ -21,6 +22,7 @@ const appRoute: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoute)
   ],
   providers: [ProductService, LoggingService],

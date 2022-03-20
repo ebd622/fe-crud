@@ -1,5 +1,6 @@
 import {LoggingService} from "./logging.service";
 import {EventEmitter, Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable() /*This means that something will be injected into the service (in our case "LogginService")*/
 export class ProductService {
@@ -20,7 +21,7 @@ export class ProductService {
       price: '700'
     }
   ];
-  constructor(private logginService: LoggingService){}
+  constructor(private http: HttpClient, private logginService: LoggingService){}
 
   //Add an event to enable 'cross-component communication'
   productUpdated = new EventEmitter<string>();
@@ -34,4 +35,14 @@ export class ProductService {
     this.products.splice(id, 1);
     //delete this.products[id];
   }
+
+
+  public fetchProducts(){
+    this.http
+      .get('http://localhost:8080/products')
+      .subscribe(products => {
+        this.logginService.logMessage('---> products: ' + products);
+      })
+  }
+
 }
