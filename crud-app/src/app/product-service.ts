@@ -6,22 +6,13 @@ import {Product} from "./product.model";
 
 @Injectable() /*This means that something will be injected into the service (in our case "LogginService")*/
 export class ProductService {
+  //Here we initiate just one Product as an example. Other Products will added from BE
   products: Product[] = [
     {
       name: 'Bike',
       description: 'Gazelle',
       price: '500'
     },
-    {
-      name: 'Bike1',
-      description: 'Gazelle with 2 wills',
-      price: '600'
-    },
-    {
-      name: 'Bike2',
-      description: 'Gazelle with 3 weels',
-      price: '700'
-    }
   ];
   constructor(private http: HttpClient, private logginService: LoggingService){}
 
