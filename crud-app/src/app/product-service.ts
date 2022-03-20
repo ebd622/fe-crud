@@ -1,6 +1,8 @@
 import {LoggingService} from "./logging.service";
 import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {map} from "rxjs";
+import {Product} from "./product.model";
 
 @Injectable() /*This means that something will be injected into the service (in our case "LogginService")*/
 export class ProductService {
@@ -39,7 +41,15 @@ export class ProductService {
 
   public fetchProducts(){
     this.http
-      .get('http://localhost:8080/products')
+      .get<Product>('http://localhost:8080/products')
+      .pipe(map(responseData => {
+          const prodArray: Product[] = [];
+          for(const key in responseData){
+            prodArray.push({name: responseData[key].name, description: responseData[key].description, price: responseData[key].price});
+          }
+          return prodArray;
+      }
+      ))
       .subscribe(products => {
         this.logginService.logMessage('---> products: ' + products);
       })
