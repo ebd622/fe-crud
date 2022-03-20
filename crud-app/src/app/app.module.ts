@@ -9,7 +9,7 @@ import {LoggingService} from "./logging.service";
 import {RouterModule, Routes} from "@angular/router";
 
 const appRoute: Routes = [
-  //Add routing to manage the app via EdgeRouter
+  //Add routing (just as an example)
   {path: 'app', component: AppComponent}
 ];
 @NgModule({
