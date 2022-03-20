@@ -1,7 +1,7 @@
 import {LoggingService} from "./logging.service";
 import {EventEmitter, Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {map} from "rxjs";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {catchError, map, throwError} from "rxjs";
 import {Product} from "./product.model";
 
 @Injectable() /*This means that something will be injected into the service (in our case "LogginService")*/
@@ -24,12 +24,31 @@ export class ProductService {
     this.logginService.logMessage('Add new product: ' + name);
   }
 
-  deleteProduct(id: number) {
-    const aProduct: Product = this.products[id];
+  deleteProduct(indexArray: number) {
+    // 1. Delete a product from BE (by its [id])
+    const aProduct: Product = this.products[indexArray];
     this.logginService.logMessage('Delete product: ' + JSON.stringify(aProduct));
+    // 1.1 Create options
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+      body: {
+        id: 1,
+        name: 'test',
+      },
+    };
 
-    this.products.splice(id, 1);
-    this.logginService.logMessage('Delete Id: ' + id);
+    // 1.2
+    this.http
+      .delete('http://localhost:8080/products', options)
+      .subscribe(result => {
+        this.logginService.logMessage('Delete result: ' + result);
+      })
+
+    //2. Delete a product from FE-array (by its [index])
+    this.products.splice(indexArray, 1);
+    this.logginService.logMessage('Delete Id: ' + indexArray);
     //delete this.products[id];
   }
 
