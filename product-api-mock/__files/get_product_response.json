@@ -1,6 +1,20 @@
-{
-  "id": "1",
-  "name": "Bike",
-  "description": "Brand: Gazelle ",
-  "price": "100"
-}
+[
+    {
+        "id": "1",
+        "name": "Bike1",
+        "description": "Brand: Gazelle 1",
+        "price": "100"
+    },
+    {
+        "id": "2",
+        "name": "Bike2",
+        "description": "Brand: Gazelle 2",
+        "price": "200"
+    },
+    {
+        "id": "3",
+        "name": "Bike3",
+        "description": "Brand: Gazelle 3",
+        "price": "300"
+    }
+]
