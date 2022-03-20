@@ -25,6 +25,9 @@ export class ProductService {
   }
 
   deleteProduct(id: number) {
+    const aProduct: Product = this.products[id];
+    this.logginService.logMessage('Delete product: ' + JSON.stringify(aProduct));
+
     this.products.splice(id, 1);
     this.logginService.logMessage('Delete Id: ' + id);
     //delete this.products[id];
