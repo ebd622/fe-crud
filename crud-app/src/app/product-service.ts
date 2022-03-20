@@ -55,7 +55,8 @@ export class ProductService {
           this.products.push({
             name: prodArray[key].name,
             description: prodArray[key].description,
-            price: prodArray[key].price
+            price: prodArray[key].price,
+            id: prodArray[key].id
           });
         }
       })
