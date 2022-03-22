@@ -88,6 +88,10 @@ There are different ways to run the gateway:
 ```
 java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
 ```
+or 
+```
+mvn spring-boot:run
+```
 Hit a GET-request to the gateway:
 ```
 curl -i localhost:8080/products
