@@ -87,6 +87,10 @@ There are different ways to run the gateway:
 ### Run a jar
 ```
 java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
+
+```
+```
+java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar --API_HOST=localhost
 ```
 or 
 ```
