@@ -89,7 +89,7 @@ There are different ways to run the gateway:
 java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
 
 ```
-`API_HOST` is used specified a host name. Default value is localhost.
+`API_HOST` is used specified a host name. Default value is localhost. The value can be also passed as a parameter:
 ```
 java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar --API_HOST=localhost
 ```
