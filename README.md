@@ -93,6 +93,8 @@ java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar
 ```
 java -jar gateway/target/routing-and-filtering-gateway-0.0.1-SNAPSHOT.jar --API_HOST=localhost
 ```
+`API_HOST=wiremock_host` is used for creating a docker image.
+
 Another othion is to run it as a spring-boot:
 ```
 mvn spring-boot:run
