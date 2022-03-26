@@ -7,6 +7,9 @@ import com.netflix.zuul.ZuulFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
+import java.util.stream.Collectors;
+
 public class SimpleFilter extends ZuulFilter {
 
   private static Logger log = LoggerFactory.getLogger(SimpleFilter.class);
@@ -32,6 +35,16 @@ public class SimpleFilter extends ZuulFilter {
     HttpServletRequest request = ctx.getRequest();
 
     log.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
+
+    if ("POST".equalsIgnoreCase(request.getMethod())){
+      try {
+        String body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+        log.info("Body: " + body);
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+
 
     return null;
   }
