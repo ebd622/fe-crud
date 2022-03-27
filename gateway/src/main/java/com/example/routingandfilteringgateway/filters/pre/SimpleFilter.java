@@ -40,7 +40,7 @@ public class SimpleFilter extends ZuulFilter {
       String body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
       log.info("Body: " + body);
     } catch (IOException e) {
-      e.printStackTrace();
+      log.error(e.getMessage());
     }
     return null;
   }
