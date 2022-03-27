@@ -36,17 +36,12 @@ public class SimpleFilter extends ZuulFilter {
 
     log.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
 
-    //if (!"GET".equalsIgnoreCase(request.getMethod())){
-      try {
-        String body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
-        log.info("Body: " + body);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-    //}
-
-
+    try {
+      String body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+      log.info("Body: " + body);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
     return null;
   }
-
 }
