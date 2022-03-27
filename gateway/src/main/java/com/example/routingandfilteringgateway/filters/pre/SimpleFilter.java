@@ -38,7 +38,7 @@ public class SimpleFilter extends ZuulFilter {
 
     try {
       String body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
-      log.info("Body: " + body);
+      log.info(String.format("Body: %s", body));
     } catch (IOException e) {
       log.error(e.getMessage());
     }
