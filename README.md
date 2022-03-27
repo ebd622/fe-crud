@@ -109,7 +109,12 @@ curl -i -X POST \
 -d '{"name":"bike","description":"Brand: Gazelle","price":"100"}' \
 localhost:8080/products
 ```
-
+```
+curl -i -X PUT \
+-H 'Content-Type: application/json' \
+-d '{"id":"1","name":"bike","description":"Brand: Gazelle","price":"100"}' \
+localhost:8080/products
+```
 ### Run in a docker container
 Build a docker image:
 ```
