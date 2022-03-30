@@ -37,7 +37,7 @@ curl -i localhost:9090/api/v1/products
 ```
 Create a new product
 ```
-curl -i -X POST -d \
+curl -i -X POST -H 'Content-Type: application/json' -d \
 '{"name":"bike","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
