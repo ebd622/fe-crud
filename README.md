@@ -100,7 +100,7 @@ Another othion is to run it as a spring-boot:
 mvn spring-boot:run
 ```
 
-After starting up the gateway, it will expose APIs cia the port 8080. 
+After starting up the gateway, it will expose APIs via the port 8080. 
 Try our the following requests:
 
 ```
