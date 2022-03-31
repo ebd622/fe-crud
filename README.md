@@ -125,6 +125,10 @@ curl -i -X DELETE \
 -d '{"id":"1"}' \
 localhost:8080/products
 ```
+
+Errors:
+```
+```
 ### Run in a docker container
 Build a docker image:
 ```
