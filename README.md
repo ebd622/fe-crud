@@ -101,8 +101,9 @@ mvn spring-boot:run
 ```
 
 After starting up the gateway, it will expose APIs via the port 8080. 
-Try our the following requests:
+Try our the following requests via the gateway.
 
+Happy flows:
 ```
 curl -i localhost:8080/products
 ```
