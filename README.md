@@ -128,7 +128,12 @@ localhost:8080/products
 
 Errors:
 ```
+curl -i -X PUT 
+
+-d '{"id":"a","name":"bike","description":"Brand: Gazelle","price":"100"}' \
+localhost:8080/products
 ```
+
 ### Run in a docker container
 Build a docker image:
 ```
