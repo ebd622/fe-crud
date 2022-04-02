@@ -38,7 +38,7 @@ export class ProductService {
       },
     };
 
-    // 1.2
+    // 1.2 Run HTTP-Delete
     this.http
       .delete('http://localhost:8080/products', options)
       .subscribe(result => {
