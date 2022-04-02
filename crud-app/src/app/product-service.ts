@@ -34,7 +34,7 @@ export class ProductService {
         'Content-Type': 'application/json',
       }),
       body: {
-        id: 1 //TODO: manage ID
+        id: aProduct.id
       },
     };
 
