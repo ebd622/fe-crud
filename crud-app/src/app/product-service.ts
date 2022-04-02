@@ -6,7 +6,7 @@ import {Product} from "./product.model";
 
 @Injectable() /*This means that something will be injected into the service (in our case "LogginService")*/
 export class ProductService {
-  //Here we initiate just one Product as an example. Other Products will added from BE
+  //Here we initiate just one Product as an example. Other Products will be retrieved from BE
   products: Product[] = [
     {
       name: 'Bike',
