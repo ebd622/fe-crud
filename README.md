@@ -128,7 +128,7 @@ localhost:8080/products
 
 Errors:
 ```
-curl -i -X PUT 
+curl -i -X PUT \
 -H 'Content-Type: application/json' \
 -d '{"id":"a","name":"bike","description":"Brand: Gazelle","price":"100"}' \
 localhost:8080/products
