@@ -68,8 +68,14 @@ export class ProductService {
             });
           }
           return tmpProdArray;
-      }
-      ))
+        }),
+        catchError(errorRes => {
+          this.logginService.logMessage('Error while fetched products: ' + JSON.stringify(errorRes));
+
+          //Send to analytics server or do whatever you need
+          return throwError(errorRes);
+        })
+      )
       .subscribe(prodArray => {
         // [prodArray] is the same as a returned [tmpProdArray]
         for(const key in prodArray){
@@ -82,5 +88,4 @@ export class ProductService {
         }
       })
   }
-
 }
