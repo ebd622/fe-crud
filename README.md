@@ -135,7 +135,8 @@ localhost:8080/products
 ```
 
 ```
-curl -i -X POST 
+curl -i -X POST \
+-H 'Content-Type: application/json' \
 -d '{"name":"bike-error","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
