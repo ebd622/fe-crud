@@ -134,6 +134,13 @@ curl -i -X PUT \
 localhost:8080/products
 ```
 
+```
+curl -i -X POST 
+-d '{"name":"bike-error","description":"Brand: Gazelle","price":"100"}' \
+localhost:9090/api/v1/products
+```
+
+
 ### Run in a docker container
 Build a docker image:
 ```
