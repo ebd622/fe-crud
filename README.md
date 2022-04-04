@@ -126,7 +126,8 @@ curl -i -X DELETE \
 localhost:8080/products
 ```
 
-Errors:
+#### Errors:
+Bad request: id is not correct
 ```
 curl -i -X PUT \
 -H 'Content-Type: application/json' \
