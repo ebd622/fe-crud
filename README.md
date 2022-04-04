@@ -134,7 +134,7 @@ curl -i -X PUT \
 -d '{"id":"a","name":"bike","description":"Brand: Gazelle","price":"100"}' \
 localhost:8080/products
 ```
-
+Server error:
 ```
 curl -i -X POST \
 -H 'Content-Type: application/json' \
