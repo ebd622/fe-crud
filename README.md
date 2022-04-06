@@ -142,6 +142,8 @@ curl -i -X POST \
 localhost:8080/products
 ```
 
+Timeout error:
+
 
 ### Run in a docker container
 Build a docker image:
