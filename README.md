@@ -144,6 +144,9 @@ localhost:8080/products
 
 Timeout error:
 ```
+curl -i -X POST -d \
+
+
 ```
 
 ### Run in a docker container
