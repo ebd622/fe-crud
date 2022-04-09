@@ -145,6 +145,7 @@ localhost:8080/products
 Timeout error:
 ```
 curl -i -X POST -d \
+-H 'Content-Type: application/json' \
 '{"name":"bike-timeout","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
