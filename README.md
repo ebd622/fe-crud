@@ -147,7 +147,7 @@ Timeout error:
 curl -i -X POST \
 -H 'Content-Type: application/json' \
 -d '{"name":"bike-timeout","description":"Brand: Gazelle","price":"100"}' \
-localhost:8080/api/v1/products
+localhost:8080/products
 ```
 
 ### Run in a docker container
