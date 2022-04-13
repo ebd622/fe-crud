@@ -125,12 +125,6 @@ ff02::2	ip6-allrouters
 172.17.0.2	wiremock_host 08d47cb3b6e6 wiremock_demo
 172.17.0.3	b29203928178
 ```
-
-
-```
-curl -i localhost:8080/products
-```
-
 After starting up the gateway, it will expose APIs via the port 8080.
 Try our the following requests via the gateway. When running a gateway in a docker container the 
 following examples need ro tun in a docker-host.
