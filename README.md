@@ -129,7 +129,7 @@ After starting up the gateway, it will expose APIs via the port 8080.
 Try our the following requests via the gateway. When running a gateway in a docker container the 
 following examples need ro tun in a docker-host.
 
-#### Happy flows:
+#### Happy flows via gateway:
 ```
 curl -i localhost:8080/products
 ```
