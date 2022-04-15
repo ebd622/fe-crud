@@ -152,7 +152,7 @@ curl -i -X DELETE \
 localhost:8080/products
 ```
 
-#### Errors:
+#### Errors via gateway:
 Bad request: id is not correct
 ```
 curl -i -X PUT \
