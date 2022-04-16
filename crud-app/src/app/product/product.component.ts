@@ -21,6 +21,7 @@ export class ProductComponent {
   }
 
   onUpdateProduct(product: Product) {
+    this.productService.updateProduct(product)
     //TODO: update by Id?
   }
 }
