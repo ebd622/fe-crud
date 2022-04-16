@@ -3,6 +3,7 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {catchError, map, throwError} from "rxjs";
 import {Product} from "./product.model";
+import { of } from 'rxjs'
 
 @Injectable() /*This means that something will be injected into the service (in our case "LogginService")*/
 export class ProductService {
@@ -38,12 +39,17 @@ export class ProductService {
       },
     };
 
+    of([1,2,3]).subscribe({
+      next: (v) => console.log(v),
+      error: (e) => console.error(e),
+      complete: () => console.info('complete')
+    })
     // 1.2 Run HTTP-Delete
-    this.http
-      .delete('http://localhost:8080/products', options)
-      .subscribe(result => {
-        this.logginService.logMessage('Delete result: ' + result);
-      })
+    this.http.delete('http://localhost:8080/products', options).subscribe({
+      next: (v) => this.logginService.logMessage('Delete result: ' + v),
+      error: (e) => this.logginService.logMessage('Delete error: ' + e),
+      complete: () => this.logginService.logMessage('complete')
+    })
 
     //2. Delete a product from FE-array (by its [index])
     this.products.splice(indexArray, 1);
