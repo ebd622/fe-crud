@@ -91,6 +91,6 @@ export class ProductService {
 
   public updateProduct(product: Product) {
     this.logginService.logMessage('Update product: ' + JSON.stringify(product))
-
+    //TODO: implement logic
   }
 }
