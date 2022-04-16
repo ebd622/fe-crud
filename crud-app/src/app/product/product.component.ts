@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ProductService} from "../product-service";
 import {LoggingService} from "../logging.service";
+import {Product} from "../product.model";
 
 @Component({
   selector: 'app-product',
@@ -8,7 +9,7 @@ import {LoggingService} from "../logging.service";
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  @Input() product: {name: string, description: string, price: string};
+  @Input() product: Product;
   @Input() id: number;
 
   constructor(private productService: ProductService, private logginService: LoggingService) {}
