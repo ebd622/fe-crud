@@ -20,7 +20,7 @@ export class ProductComponent {
     this.logginService.logMessage('Deleted. Left number of products: ' + this.productService.products.length);
   }
 
-  onUpdateProduct(product: { name: string; description: string; price: string }) {
+  onUpdateProduct(product: Product) {
     //TODO: update by Id?
   }
 }
