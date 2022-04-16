@@ -46,8 +46,8 @@ export class ProductService {
     })
     // 1.2 Run HTTP-Delete
     this.http.delete('http://localhost:8080/products', options).subscribe({
-      next: (v) => this.logginService.logMessage('Delete result: ' + v),
-      error: (e) => this.logginService.logMessage('Delete error: ' + e),
+      next: (v) => this.logginService.logMessage('Delete result: ' + JSON.stringify(v)),
+      error: (e) => this.logginService.logMessage('Delete error: ' + JSON.stringify(e)),
       complete: () => this.logginService.logMessage('complete')
     })
 
