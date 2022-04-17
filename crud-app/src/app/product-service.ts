@@ -34,8 +34,8 @@ export class ProductService {
         error: (e) => this.logginService.logMessage('Add error: ' + JSON.stringify(e)),
         complete: () => {
         this.logginService.logMessage('[Add] complete')
-      }
-    })
+        }
+      })
   }
 
   deleteProduct(indexArray: number) {
