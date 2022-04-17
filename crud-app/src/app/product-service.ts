@@ -23,20 +23,19 @@ export class ProductService {
     const aProduct: Product ={name: name, description: description, price: price};
     this.logginService.logMessage('Add new product: ' + JSON.stringify(aProduct));
 
-    this.http.post('http://localhost:8080/products',
+    this.http.post<Product>('http://localhost:8080/products',
       aProduct,
       {headers: new HttpHeaders({'Content-Type': 'application/json'})})
       .subscribe( {
-        next: (v) => this.logginService.logMessage('Add result: ' + JSON.stringify(v)),
+        next: (v) => {
+          this.products.push(v);
+          this.logginService.logMessage('Add [Product] to FE: ' + JSON.stringify(v))
+        },
         error: (e) => this.logginService.logMessage('Add error: ' + JSON.stringify(e)),
         complete: () => {
         this.logginService.logMessage('[Add] complete')
       }
     })
-
-    //TODO: implement logic to add a new product
-    this.products.push({name: name, description: description, price: price});
-
   }
 
   deleteProduct(indexArray: number) {
