@@ -42,12 +42,16 @@ export class ProductService {
     this.http.delete('http://localhost:8080/products', options).subscribe({
       next: (v) => this.logginService.logMessage('Delete result: ' + JSON.stringify(v)),
       error: (e) => this.logginService.logMessage('Delete error: ' + JSON.stringify(e)),
-      complete: () => this.logginService.logMessage('complete')
+      complete: () => {
+        this.products.splice(indexArray, 1);
+        this.logginService.logMessage('Delete Id: ' + indexArray);
+        this.logginService.logMessage('complete')
+      }
     })
 
     //2. Delete a product from FE-array (by its [index])
-    this.products.splice(indexArray, 1);
-    this.logginService.logMessage('Delete Id: ' + indexArray);
+    // this.products.splice(indexArray, 1);
+    // this.logginService.logMessage('Delete Id: ' + indexArray);
   }
 
 
