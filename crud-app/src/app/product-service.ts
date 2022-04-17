@@ -20,8 +20,20 @@ export class ProductService {
   productUpdated = new EventEmitter<string>();
 
   addProduct(name: string, description: string, price: string){
-    this.logginService.logMessage('Add new product: ' + name);
-    
+    const aProduct: Product ={name: name, description: description, price: price};
+    this.logginService.logMessage('Add new product: ' + JSON.stringify(aProduct));
+
+    this.http.post('http://localhost:8080/products',
+      aProduct,
+      {headers: new HttpHeaders({'Content-Type': 'application/json'})})
+      .subscribe( {
+        next: (v) => this.logginService.logMessage('Add result: ' + JSON.stringify(v)),
+        error: (e) => this.logginService.logMessage('Add error: ' + JSON.stringify(e)),
+        complete: () => {
+        this.logginService.logMessage('[Add] complete')
+      }
+    })
+
     //TODO: implement logic to add a new product
     this.products.push({name: name, description: description, price: price});
 
