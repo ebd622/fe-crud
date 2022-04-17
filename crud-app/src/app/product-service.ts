@@ -20,8 +20,11 @@ export class ProductService {
   productUpdated = new EventEmitter<string>();
 
   addProduct(name: string, description: string, price: string){
-    this.products.push({name: name, description: description, price: price});
     this.logginService.logMessage('Add new product: ' + name);
+    
+    //TODO: implement logic to add a new product
+    this.products.push({name: name, description: description, price: price});
+
   }
 
   deleteProduct(indexArray: number) {
