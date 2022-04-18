@@ -21,7 +21,7 @@ export class ProductComponent {
   }
 
   onUpdateProduct(product: Product) {
+    //TODO: implement GUI?
     this.productService.updateProduct(product)
-    //TODO: update by Id?
   }
 }

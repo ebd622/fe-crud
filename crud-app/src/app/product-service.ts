@@ -107,8 +107,22 @@ export class ProductService {
   }
 
 
-  public updateProduct(product: Product) {
-    this.logginService.logMessage('Update product: ' + JSON.stringify(product))
+  public updateProduct(aProduct: Product) {
+    this.logginService.logMessage('Update product: ' + JSON.stringify(aProduct))
+    this.http.put<Product>('http://localhost:8080/products',
+      aProduct,
+      {headers: new HttpHeaders({'Content-Type': 'application/json'})})
+      .subscribe( {
+        next: (v) => {
+          this.products.push(v);
+          this.logginService.logMessage('Add [Product] to FE: ' + JSON.stringify(v))
+        },
+        error: (e) => this.logginService.logMessage('Add error: ' + JSON.stringify(e)),
+        complete: () => {
+          this.logginService.logMessage('[Add] complete')
+        }
+      })
+
     //TODO: implement logic
   }
 }
