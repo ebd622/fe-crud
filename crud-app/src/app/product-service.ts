@@ -114,8 +114,7 @@ export class ProductService {
       {headers: new HttpHeaders({'Content-Type': 'application/json'})})
       .subscribe( {
         next: (v) => {
-          this.products.push(v);
-          this.logginService.logMessage('Add [Product] to FE: ' + JSON.stringify(v))
+          this.logginService.logMessage('Updated product: ' + JSON.stringify(v))
         },
         error: (e) => this.logginService.logMessage('Add error: ' + JSON.stringify(e)),
         complete: () => {
