@@ -57,7 +57,7 @@ export class ProductService {
       next: (v) => this.logginService.logMessage('Delete result: ' + JSON.stringify(v)),
       error: (e) => this.logginService.logMessage('[Delete] error: ' + JSON.stringify(e)),
       complete: () => {
-        // When http-delete it successfully completeted in BE then we can update a list in FE
+        // When http-delete it successfully completed in BE then we can update a list in FE
         this.products.splice(indexArray, 1);
         this.logginService.logMessage('Delete Id: ' + indexArray);
         this.logginService.logMessage('complete')
