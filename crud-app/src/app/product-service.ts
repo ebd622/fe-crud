@@ -71,8 +71,7 @@ export class ProductService {
 
 
   public fetchProducts(){
-    this.http
-      .get<Product>('http://localhost:8080/products')
+    this.http.get<Product>('http://localhost:8080/products')
       .pipe(map(responseData => {
           this.logginService.logMessage('Fetched products: ' + JSON.stringify(responseData));
           // here [tmpProdArray] just an example of using [pipe:] and operator [map]
