@@ -55,7 +55,7 @@ export class ProductService {
     // 1.2 Run HTTP-Delete
     this.http.delete('http://localhost:8080/products', options).subscribe({
       next: (v) => this.logginService.logMessage('Delete result: ' + JSON.stringify(v)),
-      error: (e) => this.logginService.logMessage('Delete error: ' + JSON.stringify(e)),
+      error: (e) => this.logginService.logMessage('[Delete] error: ' + JSON.stringify(e)),
       complete: () => {
         // When http-delete it successfully completeted in BE then we can update a list in FE
         this.products.splice(indexArray, 1);
@@ -87,7 +87,7 @@ export class ProductService {
           return tmpProdArray;
         }),
         catchError(errorRes => {
-          this.logginService.logMessage('Error while fetched products: ' + JSON.stringify(errorRes));
+          this.logginService.logMessage('[Get] error: ' + JSON.stringify(errorRes));
 
           //Send to analytics server or do whatever you need
           return throwError(errorRes);
@@ -116,7 +116,7 @@ export class ProductService {
         next: (v) => {
           this.logginService.logMessage('Updated product: ' + JSON.stringify(v))
         },
-        error: (e) => this.logginService.logMessage('Add error: ' + JSON.stringify(e)),
+        error: (e) => this.logginService.logMessage('[Update] error: ' + JSON.stringify(e)),
         complete: () => {
           this.logginService.logMessage('[Add] complete')
         }
