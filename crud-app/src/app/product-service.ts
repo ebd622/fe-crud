@@ -118,10 +118,8 @@ export class ProductService {
         },
         error: (e) => this.logginService.logMessage('[Update] error: ' + JSON.stringify(e)),
         complete: () => {
-          this.logginService.logMessage('[Add] complete')
+          this.logginService.logMessage('[Update] complete')
         }
       })
-
-    //TODO: implement logic
   }
 }
