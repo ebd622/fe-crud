@@ -42,7 +42,7 @@ export class ProductService {
     // 1. Delete a product from BE (by its [id])
     const aProduct: Product = this.products[indexArray];
     this.logginService.logMessage('Delete product: ' + JSON.stringify(aProduct));
-    // 1.1 Create options
+    // 2. Create options
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export class ProductService {
       },
     };
 
-    // 1.2 Run HTTP-Delete
+    // 3. Run HTTP-Delete
     this.http.delete('http://localhost:8080/products', options).subscribe({
       next: (v) => this.logginService.logMessage('Delete result: ' + JSON.stringify(v)),
       error: (e) => this.logginService.logMessage('[Delete] error: ' + JSON.stringify(e)),
