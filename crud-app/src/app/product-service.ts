@@ -63,10 +63,6 @@ export class ProductService {
         this.logginService.logMessage('complete')
       }
     })
-
-    //2. Delete a product from FE-array (by its [index])
-    // this.products.splice(indexArray, 1);
-    // this.logginService.logMessage('Delete Id: ' + indexArray);
   }
 
 
