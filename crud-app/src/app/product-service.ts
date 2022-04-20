@@ -43,7 +43,8 @@ export class ProductService {
     // 1. Delete a product from BE (by its [id])
     const aProduct: Product = this.products[indexArray];
     this.logginService.logMessage('Delete product: ' + JSON.stringify(aProduct));
-    // 2. Create options
+
+    // 2. Create options (can be also created "on a fly", see updateProduct() )
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
