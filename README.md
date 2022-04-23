@@ -209,3 +209,4 @@ docker-compose down
 * [Netflix Zuul](https://github.com/Netflix/zuul)
 * [How To Dockerize an Angular Application with Nginx](https://www.indellient.com/blog/how-to-dockerize-an-angular-application-with-nginx)
 * [Bootstrap css](https://getbootstrap.com/docs/3.4/css/)
+* [Bootstrap editor](https://angrytools.com/bootstrap/editor/)
