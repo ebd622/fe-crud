@@ -24,4 +24,9 @@ export class ProductComponent {
     //TODO: implement GUI?
     this.productService.updateProduct(product)
   }
+
+  onEditProduct(product: Product) {
+    //TODO: implement logic?
+  }
+
 }
