@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ProductService} from "../product-service";
 import {LoggingService} from "../logging.service";
+import {Product} from "../product.model";
 
 @Component({
   selector: 'app-manage-product',
@@ -8,6 +9,7 @@ import {LoggingService} from "../logging.service";
   styleUrls: ['./manage-product.component.css']
 })
 export class ManageProductComponent implements OnInit {
+  @Input() product: Product = {name: "NewBike", description: "Bike", price: "100"};
 
   constructor(private productService: ProductService, private loggingService: LoggingService) {
     // this.productService.productUpdated.subscribe(
@@ -16,6 +18,7 @@ export class ManageProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.loggingService.logMessage('manage-component: ngOnInit()');
     this.productService.productUpdated.subscribe(
       (action: string) => alert('Action: ' + action)

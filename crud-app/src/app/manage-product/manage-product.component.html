@@ -1,27 +1,32 @@
 <div class="row">
   <p>manage-product.component</p>
   <div class="col-xs-12 col-md-8 col-md-offset-2">
+
     <div class="form-group">
       <label>Product Name</label>
-      <input
-        type="text"
-        class="form-control"
-        #productName>
+      <input type="text" class="form-control" [(ngModel)]="product.name">
     </div>
     <div class="form-group">
       <label>Product Description</label>
-      <input
-        type="text"
-        class="form-control"
-        #productDescription>
+      <input type="text" class="form-control" [(ngModel)]="product.description">
     </div>
     <div class="form-group">
       <label>Price</label>
-      <input
-        type="text"
-        class="form-control"
-        #productPrice>
+      <input type="text" class="form-control" [(ngModel)]="product.price">
     </div>
+
+<!--    <div class="form-group">-->
+<!--      <label>Product Name</label>-->
+<!--      <input type="text" class="form-control" #productName>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label>Product Description</label>-->
+<!--      <input type="text" class="form-control" #productDescription>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <label>Price</label>-->
+<!--      <input type="text" class="form-control" #productPrice>-->
+<!--    </div>-->
 
     <div class="form-group">
       <label>Status</label>
@@ -39,7 +44,8 @@
 
     <button
       class="btn btn-primary"
-      (click)="onAddProduct(productName.value, productDescription.value, productPrice.value, status.value)">
+      (click)="onAddProduct(product.name, product.description, product.price, status.value)">
+<!--      (click)="onAddProduct(productName.value, productDescription.value, productPrice.value, status.value)">-->
       Add Product
     </button>
   </div>
