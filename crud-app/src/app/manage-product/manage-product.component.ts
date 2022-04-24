@@ -9,6 +9,7 @@ import {Product} from "../product.model";
   styleUrls: ['./manage-product.component.css']
 })
 export class ManageProductComponent implements OnInit {
+  //Initial value which will be prepopulated in the form
   @Input() product: Product = {name: "bike", description: "Brand: Gazelle", price: "100"};
 
   constructor(private productService: ProductService, private loggingService: LoggingService) {
