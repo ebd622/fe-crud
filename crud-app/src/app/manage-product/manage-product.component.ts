@@ -19,12 +19,10 @@ export class ManageProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.loggingService.logMessage('manage-component: ngOnInit()');
     this.productService.productUpdated.subscribe(
       (action: string) => alert('Action: ' + action)
     );
-
   }
 
   onAddProduct(name: string, desctiption: string, price: string, status: string) {
