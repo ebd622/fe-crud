@@ -9,7 +9,7 @@ import {Product} from "../product.model";
   styleUrls: ['./manage-product.component.css']
 })
 export class ManageProductComponent implements OnInit {
-  @Input() product: Product = {name: "NewBike", description: "Bike", price: "100"};
+  @Input() product: Product = {name: "bike", description: "Brand: Gazelle", price: "100"};
 
   constructor(private productService: ProductService, private loggingService: LoggingService) {
     // this.productService.productUpdated.subscribe(
