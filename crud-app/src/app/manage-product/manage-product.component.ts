@@ -31,7 +31,6 @@ export class ManageProductComponent implements OnInit {
     this.productService.addProduct(name, desctiption, price);
     this.loggingService.logMessage('manage-component: onAddProduct(...)');
     //TODO: use status later
-
   }
 
   getNumberOfProducts(): number {
