@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from "./product-service";
+import {Product} from "./product.model";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import {ProductService} from "./product-service";
 export class AppComponent implements OnInit{
   title = 'crud-app1';
   name = 'ebd';
-  products: {name: string, description: string, price: string}[] = [];
+  products: Product [];
 
   constructor(private productService: ProductService) {}
 
