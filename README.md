@@ -8,7 +8,7 @@
    * [Run a jar](https://github.com/ebd622/fe-crud/blob/main/README.md#run-a-jar)
    * [Run in a docker container](https://github.com/ebd622/fe-crud/blob/main/README.md#run-in-a-docker-container)
    * [Happy flows via gateway](https://github.com/ebd622/fe-crud/blob/main/README.md#happy-flows-via-gateway)
-   * [Errors via gateway](https://github.com/ebd622/fe-crud/blob/main/README.md#errors-via-gateway)
+   * [Errors via gateway](#errors-via-gateway)
 * [crud-app](#crud-app)
 * [Run both servises with a docker-compose](#run-both-servises-with-a-docker-compose)
 * [Resources](#resources)
