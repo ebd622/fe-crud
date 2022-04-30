@@ -26,6 +26,7 @@ export class ProductComponent {
   }
 
   onEditProduct(product: Product) {
+    this.logginService.logMessage('Edit Product: ' + JSON.stringify(product));
     //TODO: implement logic?
   }
 
