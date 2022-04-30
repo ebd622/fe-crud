@@ -19,6 +19,7 @@ export class ProductService {
 
   //Add an event to enable 'cross-component communication'
   productUpdated = new EventEmitter<string>();
+  productEdit = new EventEmitter<Product>();
 
   addProduct(name: string, description: string, price: string){
     const aProduct: Product ={name: name, description: description, price: price};
