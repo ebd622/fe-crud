@@ -40,6 +40,7 @@ export class ManageProductComponent implements OnInit {
   }
   onUpdateProduct(name: string, desctiption: string, price: string, status: string) {
     this.productService.updateProduct({name: name, description: desctiption, price: price});
+    this.updateButtonDisable = true; //Disable [Update]-button after updating
     this.loggingService.logMessage('manage-component: onUpdateProduct(...)');
   }
 
