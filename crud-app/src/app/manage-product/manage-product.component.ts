@@ -10,7 +10,7 @@ import {Product} from "../product.model";
 })
 export class ManageProductComponent implements OnInit {
   //Initial value which will be prepopulated in the form
-  @Input() product: Product = {name: "bike", description: "Brand: Gazelle", price: "100"};
+  /*@Input()*/ product: Product = {name: "bike", description: "Brand: Gazelle", price: "100"};
 
   constructor(private productService: ProductService, private loggingService: LoggingService) {
     // this.productService.productUpdated.subscribe(
