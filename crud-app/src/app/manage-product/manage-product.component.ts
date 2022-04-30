@@ -45,7 +45,7 @@ export class ManageProductComponent implements OnInit {
   //   this.loggingService.logMessage('manage-component: onUpdateProduct(...)');
   // }
 
-  onUpdateProduct(aProduct: Product) {
+  onUpdateProduct(aProduct: Product, status: string) {
     this.productService.updateProduct1(aProduct)
       .subscribe( {
         next: (v) => {
