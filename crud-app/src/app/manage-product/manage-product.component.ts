@@ -11,6 +11,7 @@ import {Product} from "../product.model";
 export class ManageProductComponent implements OnInit {
   //Initial value which will be prepopulated in the form
   /*@Input()*/ product: Product = {name: "bike", description: "Brand: Gazelle", price: "100"};
+  updateButtonDisable: Boolean = true;
 
   constructor(private productService: ProductService, private loggingService: LoggingService) {
     // this.productService.productUpdated.subscribe(
@@ -26,6 +27,7 @@ export class ManageProductComponent implements OnInit {
     this.productService.productEdit.subscribe(
       (aProduct) => {
         this.product = aProduct;
+        this.updateButtonDisable = false;
         //alert('Edit: ' + JSON.stringify(aProduct))
       }
     )
