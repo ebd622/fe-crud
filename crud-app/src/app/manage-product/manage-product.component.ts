@@ -25,7 +25,8 @@ export class ManageProductComponent implements OnInit {
     );
     this.productService.productEdit.subscribe(
       (aProduct) => {
-        alert('Edit: ' + JSON.stringify(aProduct))
+        this.product = aProduct;
+        //alert('Edit: ' + JSON.stringify(aProduct))
       }
     )
   }
