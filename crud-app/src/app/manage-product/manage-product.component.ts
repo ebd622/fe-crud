@@ -23,6 +23,11 @@ export class ManageProductComponent implements OnInit {
     this.productService.productUpdated.subscribe(
       (action: string) => alert('Action: ' + action)
     );
+    this.productService.productEdit.subscribe(
+      (aProduct) => {
+        alert('Edit: ' + JSON.stringify(aProduct))
+      }
+    )
   }
 
   onAddProduct(name: string, desctiption: string, price: string, status: string) {
