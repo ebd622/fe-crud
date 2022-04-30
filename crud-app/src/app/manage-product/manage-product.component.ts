@@ -39,13 +39,20 @@ export class ManageProductComponent implements OnInit {
     //TODO: use status later
   }
   onUpdateProduct(name: string, desctiption: string, price: string, status: string) {
-    this.productService.updateProduct({name: name, description: desctiption, price: price});
+    //this.productService.updateProduct({name: name, description: desctiption, price: price});
     this.updateButtonDisable = true; //Disable [Update]-button after updating
+    this.clearForm();
     this.loggingService.logMessage('manage-component: onUpdateProduct(...)');
   }
 
   getNumberOfProducts(): number {
     this.loggingService.logMessage('manage-component: getNumberOfProducts');
     return this.productService.products.length;
+  }
+
+  private clearForm(){
+    this.product.name="";
+    this.product.description="";
+    this.product.price="";
   }
 }
