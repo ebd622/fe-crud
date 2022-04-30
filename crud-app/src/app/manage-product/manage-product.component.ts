@@ -38,11 +38,26 @@ export class ManageProductComponent implements OnInit {
     this.loggingService.logMessage('manage-component: onAddProduct(...)');
     //TODO: use status later
   }
-  onUpdateProduct(name: string, desctiption: string, price: string, status: string) {
-    this.productService.updateProduct({name: name, description: desctiption, price: price});
-    this.updateButtonDisable = true; //Disable [Update]-button after updating
-    this.clearForm();
-    this.loggingService.logMessage('manage-component: onUpdateProduct(...)');
+  // onUpdateProduct(name: string, desctiption: string, price: string, status: string) {
+  //   this.productService.updateProduct({name: name, description: desctiption, price: price});
+  //   this.updateButtonDisable = true; //Disable [Update]-button after updating
+  //   this.clearForm();
+  //   this.loggingService.logMessage('manage-component: onUpdateProduct(...)');
+  // }
+
+  onUpdateProduct(aProduct: Product) {
+    this.productService.updateProduct1(aProduct)
+      .subscribe( {
+        next: (v) => {
+          this.loggingService.logMessage('Updated product: ' + JSON.stringify(v))
+          this.updateButtonDisable = true; //Disable [Update]-button after updating
+          this.clearForm();
+        },
+        error: (e) => this.loggingService.logMessage('[Update] error: ' + JSON.stringify(e)),
+        complete: () => {
+          this.loggingService.logMessage('[Update] complete')
+        }
+      })
   }
 
   getNumberOfProducts(): number {

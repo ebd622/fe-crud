@@ -1,7 +1,7 @@
 import {LoggingService} from "./logging.service";
 import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {catchError, map, throwError} from "rxjs";
+import {catchError, map, Observable, throwError} from "rxjs";
 import {Product} from "./product.model";
 
 @Injectable() /*This means that something will be injected into the service (in our case "LogginService")*/
@@ -120,5 +120,12 @@ export class ProductService {
           this.logginService.logMessage('[Update] complete')
         }
       })
+  }
+
+  public updateProduct1(aProduct: Product) : Observable<Product> {
+    this.logginService.logMessage('Update product: ' + JSON.stringify(aProduct))
+    return this.http.put<Product>('http://localhost:8080/products',
+      aProduct,
+      {headers: new HttpHeaders({'Content-Type': 'application/json'})})
   }
 }
