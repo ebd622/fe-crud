@@ -27,7 +27,8 @@ export class ProductComponent {
 
   onEditProduct(product: Product) {
     this.logginService.logMessage('Edit Product: ' + JSON.stringify(product));
-    this.productService.productEdit.emit(product);
+    let copy = Object.assign({}, product);
+    this.productService.productEdit.emit(copy);
     //TODO: implement logic?
   }
 
