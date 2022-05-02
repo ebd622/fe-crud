@@ -38,12 +38,6 @@ export class ManageProductComponent implements OnInit {
     this.loggingService.logMessage('manage-component: onAddProduct(...)');
     //TODO: use status later
   }
-  // onUpdateProduct(name: string, desctiption: string, price: string, status: string) {
-  //   this.productService.updateProduct({name: name, description: desctiption, price: price});
-  //   this.updateButtonDisable = true; //Disable [Update]-button after updating
-  //   this.clearForm();
-  //   this.loggingService.logMessage('manage-component: onUpdateProduct(...)');
-  // }
 
   onUpdateProduct(aProduct: Product, status: string) {
     this.productService.updateProduct1(aProduct)
