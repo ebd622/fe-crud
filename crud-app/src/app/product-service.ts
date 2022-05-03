@@ -122,7 +122,7 @@ export class ProductService {
   //     })
   // }
 
-  public updateProduct1(aProduct: Product) : Observable<Product> {
+  public updateProduct(aProduct: Product) : Observable<Product> {
     this.logginService.logMessage('Update product: ' + JSON.stringify(aProduct))
     return this.http.put<Product>('http://localhost:8080/products',
       aProduct,

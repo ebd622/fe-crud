@@ -40,7 +40,7 @@ export class ManageProductComponent implements OnInit {
   }
 
   onUpdateProduct(aProduct: Product, status: string) {
-    this.productService.updateProduct1(aProduct)
+    this.productService.updateProduct(aProduct)
       .subscribe( {
         next: (v) => {
           this.loggingService.logMessage('Updated product: ' + JSON.stringify(v))
