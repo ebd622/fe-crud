@@ -105,23 +105,6 @@ export class ProductService {
       })
   }
 
-
-  // public updateProduct(aProduct: Product) {
-  //   this.logginService.logMessage('Update product: ' + JSON.stringify(aProduct))
-  //   this.http.put<Product>('http://localhost:8080/products',
-  //     aProduct,
-  //     {headers: new HttpHeaders({'Content-Type': 'application/json'})})
-  //     .subscribe( {
-  //       next: (v) => {
-  //         this.logginService.logMessage('Updated product: ' + JSON.stringify(v))
-  //       },
-  //       error: (e) => this.logginService.logMessage('[Update] error: ' + JSON.stringify(e)),
-  //       complete: () => {
-  //         this.logginService.logMessage('[Update] complete')
-  //       }
-  //     })
-  // }
-
   public updateProduct(aProduct: Product) : Observable<Product> {
     this.logginService.logMessage('Update product: ' + JSON.stringify(aProduct))
     return this.http.put<Product>('http://localhost:8080/products',
