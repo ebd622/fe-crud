@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/v1/products"
+  },
+  "response": {
+    "status": 201,
+    "bodyFileName": "post_product_response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
