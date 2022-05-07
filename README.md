@@ -27,7 +27,8 @@ or
 ```
 docker run --rm  -d -p 9090:8080 -p 8443:8443 --name wiremock_demo \
   -v $PWD/product-api-mock:/home/wiremock \
-  wiremock/wiremock
+  wiremock/wiremock \
+  -global-response-templating  
 ```
 In both cases a docker container will be created and run. The only difference is a docker image. 
 
