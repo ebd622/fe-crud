@@ -5,7 +5,8 @@
   },
   "response": {
     "status": 201,
-    "bodyFileName": "post_product_response.json",
+    "jsonBody": "{{request.body}}",
+    "transformers": ["response-template"],
     "headers": {
       "Content-Type": "application/json"
     }
