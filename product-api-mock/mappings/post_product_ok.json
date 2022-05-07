@@ -1,18 +1,7 @@
 {
   "request": {
     "method": "POST",
-    "urlPath": "/api/v1/products",
-    "bodyPatterns": [
-      {
-        "matchesJsonPath": "$[?(@.['name'] == 'bike')]"
-      },
-      {
-        "matchesJsonPath": "$[?(@.['description'] =~ /-?(.+)/)]"
-      },
-      {
-        "matchesJsonPath": "$[?(@.['price'] =~ /[A-Za-z0-9_-]+/)]"
-      }    
-    ]
+    "urlPath": "/api/v1/products"
   },
   "response": {
     "status": 201,
