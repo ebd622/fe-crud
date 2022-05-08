@@ -5,12 +5,8 @@
   },
   "response": {
     "status": 200,
-    "jsonBody": {
-      "id": "1",
-      "name": "bike",
-      "description": "Brand: Gazelle",
-      "price": "100"
-    },
+    "jsonBody": "{{request.body}}",
+    "transformers": ["response-template"],
     "headers": {
       "Content-Type": "application/json"
     }
