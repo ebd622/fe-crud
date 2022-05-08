@@ -8,7 +8,7 @@
         "matchesJsonPath": "$[?(@.['id'] =~ /-?(\\d+)/)]"
       },
       {
-        "matchesJsonPath": "$[?(@.['name'] =~ /[A-Za-z0-9_-]+/)]"
+        "matchesJsonPath": "$[?(@.['name'] == 'bicycle')]"
       },
       {
         "matchesJsonPath": "$[?(@.['description'] =~ /-?(.+)/)]"
@@ -22,7 +22,7 @@
     "status": 200,
     "jsonBody": {
       "id": "1",
-      "name": "bike",
+      "name": "bicycle",
       "description": "Brand: Gazelle",
       "price": "100"
     },
