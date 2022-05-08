@@ -1,0 +1,32 @@
+{
+  "request": {
+    "method": "PUT",
+    "urlPath": "/api/v1/products",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.['id'] =~ /-?(\\d+)/)]"
+      },
+      {
+        "matchesJsonPath": "$[?(@.['name'] =~ /[A-Za-z0-9_-]+/)]"
+      },
+      {
+        "matchesJsonPath": "$[?(@.['description'] =~ /-?(.+)/)]"
+      },
+      {
+        "matchesJsonPath": "$[?(@.['price'] =~ /[A-Za-z0-9_-]+/)]"
+      }    
+    ]
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "id": "1",
+      "name": "bike",
+      "description": "Brand: Gazelle",
+      "price": "100"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
