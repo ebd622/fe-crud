@@ -33,6 +33,7 @@ docker run --rm  -d -p 9090:8080 -p 8443:8443 --name wiremock_demo \
 In both cases a docker container will be created and run. The only difference is a docker image. 
 
 In the second example the [wiremock-docker](https://github.com/wiremock/wiremock-docker) is used.
+Use `global-response-templating` for enabling response templating
 
 ### Happy flows
 Get all products
