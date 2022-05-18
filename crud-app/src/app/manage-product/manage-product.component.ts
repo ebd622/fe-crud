@@ -34,7 +34,18 @@ export class ManageProductComponent implements OnInit {
   }
 
   onAddProduct(name: string, desctiption: string, price: string, status: string) {
-    this.productService.addProduct(name, desctiption, price);
+    this.productService.addProduct(name, desctiption, price)
+      .subscribe( {
+        next: (v) => {
+          this.productService.updateProductArray(v);
+          this.loggingService.logMessage('Add [Product] to FE: ' + JSON.stringify(v))
+        },
+        error: (e) => this.loggingService.logMessage('Add error: ' + JSON.stringify(e)),
+        complete: () => {
+          this.loggingService.logMessage('[Add] complete')
+        }
+      })
+
     this.loggingService.logMessage('manage-component: onAddProduct(...)');
     //TODO: use status later
   }

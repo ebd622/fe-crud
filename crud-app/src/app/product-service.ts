@@ -21,23 +21,13 @@ export class ProductService {
   productUpdated = new EventEmitter<string>();
   productEdit = new EventEmitter<Product>();
 
-  addProduct(name: string, description: string, price: string){
+  addProduct(name: string, description: string, price: string) : Observable<Product> {
     const aProduct: Product ={name: name, description: description, price: price};
     this.logginService.logMessage('Add new product: ' + JSON.stringify(aProduct));
 
-    this.http.post<Product>('http://localhost:8080/products',
+    return this.http.post<Product>('http://localhost:8080/products',
       aProduct,
       {headers: new HttpHeaders({'Content-Type': 'application/json'})})
-      .subscribe( {
-        next: (v) => {
-          this.products.push(v);
-          this.logginService.logMessage('Add [Product] to FE: ' + JSON.stringify(v))
-        },
-        error: (e) => this.logginService.logMessage('Add error: ' + JSON.stringify(e)),
-        complete: () => {
-        this.logginService.logMessage('[Add] complete')
-        }
-      })
   }
 
   public updateProduct(aProduct: Product) : Observable<Product> {
@@ -45,6 +35,11 @@ export class ProductService {
     return this.http.put<Product>('http://localhost:8080/products',
       aProduct,
       {headers: new HttpHeaders({'Content-Type': 'application/json'})})
+  }
+
+
+  public updateProductArray(aProduct: Product): void {
+    this.products.push(aProduct);
   }
 
   deleteProduct(indexArray: number) {
