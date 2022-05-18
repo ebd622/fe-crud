@@ -34,6 +34,8 @@ In both cases a docker container will be created and run. The only difference is
 
 In the second example the [wiremock-docker](https://github.com/wiremock/wiremock-docker) is used.
 
+Use `global-response-templating` for enabling response templating
+
 ### Happy flows
 Get all products
 ```
@@ -48,7 +50,7 @@ localhost:9090/api/v1/products
 Update an exising product
 ```
 curl -i -X PUT -d \
-'{"id":"1","name":"bike","description":"Brand: Gazelle","price":"100"}' \
+'{"id":"1","name":"bicycle","description":"Brand: Gazelle","price":"100"}' \
 localhost:9090/api/v1/products
 ```
 
@@ -212,3 +214,4 @@ docker-compose down
 * [How To Dockerize an Angular Application with Nginx](https://www.indellient.com/blog/how-to-dockerize-an-angular-application-with-nginx)
 * [Bootstrap css](https://getbootstrap.com/docs/3.4/css/)
 * [Bootstrap editor](https://angrytools.com/bootstrap/editor/)
+* [Handlebars templates](https://handlebarsjs.com/)
