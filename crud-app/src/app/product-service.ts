@@ -40,6 +40,13 @@ export class ProductService {
       })
   }
 
+  public updateProduct(aProduct: Product) : Observable<Product> {
+    this.logginService.logMessage('Update product: ' + JSON.stringify(aProduct))
+    return this.http.put<Product>('http://localhost:8080/products',
+      aProduct,
+      {headers: new HttpHeaders({'Content-Type': 'application/json'})})
+  }
+
   deleteProduct(indexArray: number) {
     // 1. Delete a product from BE (by its [id])
     const aProduct: Product = this.products[indexArray];
@@ -105,10 +112,4 @@ export class ProductService {
       })
   }
 
-  public updateProduct(aProduct: Product) : Observable<Product> {
-    this.logginService.logMessage('Update product: ' + JSON.stringify(aProduct))
-    return this.http.put<Product>('http://localhost:8080/products',
-      aProduct,
-      {headers: new HttpHeaders({'Content-Type': 'application/json'})})
-  }
 }
