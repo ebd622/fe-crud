@@ -33,7 +33,3 @@ ng g c product
 ```
 ng g c manage-product
 ```
-
-
-## Development server
-
