@@ -5,7 +5,7 @@
   },
   "response": {
     "status": 201,
-    "jsonBody": "{{request.body}}",
+    "body": "{{{request.body}}}",
     "transformers": ["response-template"],
     "headers": {
       "Content-Type": "application/json"
