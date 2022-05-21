@@ -49,8 +49,8 @@ export class ProductService {
         this.products[i]=aProduct;
       }
     }
-    //this.products.push(aProduct);
-}
+  }
+  
   deleteProduct(indexArray: number) {
     // 1. Delete a product from BE (by its [id])
     const aProduct: Product = this.products[indexArray];
