@@ -42,6 +42,9 @@ export class ProductService {
     this.products.push(aProduct);
   }
 
+  public replaceProductInArray(aProduct: Product): void {
+  this.products.push(aProduct);
+}
   deleteProduct(indexArray: number) {
     // 1. Delete a product from BE (by its [id])
     const aProduct: Product = this.products[indexArray];
