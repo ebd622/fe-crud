@@ -57,10 +57,10 @@ export class ManageProductComponent implements OnInit {
           this.loggingService.logMessage('Updated product: ' + JSON.stringify(v))
           this.updateButtonDisable = true; //Disable [Update]-button after updating
           this.clearForm();
+          this.productService.addProductToArray(v);
         },
         error: (e) => this.loggingService.logMessage('[Update] error: ' + JSON.stringify(e)),
         complete: () => {
-
           this.loggingService.logMessage('[Update] complete')
         }
       })
