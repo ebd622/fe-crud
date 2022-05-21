@@ -43,7 +43,13 @@ export class ProductService {
   }
 
   public replaceProductInArray(aProduct: Product): void {
-  this.products.push(aProduct);
+    for(let i=0; i < this.products.length; i++){
+      this.logginService.logMessage(this.products[i].id); //use i instead of 0
+      if(this.products[i].id == aProduct.id){
+        this.products[i]=aProduct;
+      }
+    }
+    //this.products.push(aProduct);
 }
   deleteProduct(indexArray: number) {
     // 1. Delete a product from BE (by its [id])
