@@ -37,7 +37,7 @@ export class ManageProductComponent implements OnInit {
     this.productService.addProduct(name, desctiption, price)
       .subscribe( {
         next: (v) => {
-          this.productService.updateProductArray(v);
+          this.productService.addProductToArray(v);
           this.loggingService.logMessage('Add [Product] to FE: ' + JSON.stringify(v))
         },
         error: (e) => this.loggingService.logMessage('Add error: ' + JSON.stringify(e)),
@@ -60,6 +60,7 @@ export class ManageProductComponent implements OnInit {
         },
         error: (e) => this.loggingService.logMessage('[Update] error: ' + JSON.stringify(e)),
         complete: () => {
+
           this.loggingService.logMessage('[Update] complete')
         }
       })

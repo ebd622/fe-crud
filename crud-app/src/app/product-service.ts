@@ -38,7 +38,7 @@ export class ProductService {
   }
 
 
-  public updateProductArray(aProduct: Product): void {
+  public addProductToArray(aProduct: Product): void {
     this.products.push(aProduct);
   }
 
