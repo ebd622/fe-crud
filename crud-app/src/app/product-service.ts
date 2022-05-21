@@ -51,6 +51,16 @@ export class ProductService {
     }
   }
 
+  public getUniqueId(): number {
+    let maxNumber : number = 0;
+    this.products.forEach((aProduct => {
+      if(aProduct.id !== undefined ){
+        maxNumber = Math.max(maxNumber, parseInt(aProduct.id));
+      }
+    }))
+    return maxNumber+1;
+  }
+
   deleteProduct(indexArray: number) {
     // 1. Delete a product from BE (by its [id])
     const aProduct: Product = this.products[indexArray];

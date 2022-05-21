@@ -37,6 +37,9 @@ export class ManageProductComponent implements OnInit {
     this.productService.addProduct(name, desctiption, price)
       .subscribe( {
         next: (v) => {
+          let id : number = this.productService.getUniqueId();
+          v.id = id.toString();
+
           this.productService.addProductToArray(v);
           this.loggingService.logMessage('Add [Product] to FE: ' + JSON.stringify(v))
         },
