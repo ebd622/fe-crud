@@ -37,6 +37,7 @@ export class ManageProductComponent implements OnInit {
     this.productService.addProduct(name, desctiption, price)
       .subscribe( {
         next: (v) => {
+          //This is a hack (the mock doesn't return an Id)
           let id : number = this.productService.getUniqueId();
           v.id = id.toString();
 
