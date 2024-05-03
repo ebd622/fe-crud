@@ -216,4 +216,4 @@ docker-compose down
 * [Bootstrap editor](https://angrytools.com/bootstrap/editor/)
 * [Handlebars templates](https://handlebarsjs.com/)
 * [How to setup a Docker Nginx reverse proxy](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Docker-Nginx-reverse-proxy-setup-example)
-* https://youtu.be/ZmH1L1QeNHk
+* [Configure a Docker Nginx Reverse Proxy Image and Container](https://youtu.be/ZmH1L1QeNHk)
