@@ -41,4 +41,4 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
-//--- HTTP PUT: Update existing item
+//--- HTTP PUT: Update existing product by id
