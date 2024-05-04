@@ -19,6 +19,7 @@ const products = [
 
   //res.send('Hello World!')
   //res.json({msg: 'Hello'})
+  console.log(`List of products: ${JSON.stringify(products)}`)
   res.json(products)
 })
 
@@ -26,15 +27,14 @@ const products = [
 app.post('/v1/products', (req, res) => {
   const product = req.body;
 
-  // Perform any necessary validation or processing
+  // TODO: Perform any necessary validation if necessary
 
   // Example response
-  const newProduct = {
-    id: products.length +1
-  };
+  product.id = products.length +1
 
   products.push(product)
-  res.json(newProduct);
+  console.log(`New product has been added: ${JSON.stringify(product)}`)
+  res.json({id: product.id});
 });
 
 app.listen(port, () => {
