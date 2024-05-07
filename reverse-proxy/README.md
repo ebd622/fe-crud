@@ -15,6 +15,7 @@ Add config
     }
 ```
 
+## Run a container
 ```
 docker start nginx-base
 ```
