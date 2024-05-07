@@ -11,4 +11,5 @@ Add config
     }
 ```
 ## Resources
-* [Install express](https://expressjs.com/en/starter/installing.html)
+* [How to setup a Docker Nginx reverse proxy server example](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Docker-Nginx-reverse-proxy-setup-example)
+
