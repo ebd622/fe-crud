@@ -3,6 +3,7 @@ This is Nginx-based reverse proxy server
 TODO
 
 ## Configure and run
+### Configure
 #### Download and run the official Nginx image from Docker Hub:
 ```
 docker run -d --name nginx-base -p 80:80 nginx:latest
