@@ -43,3 +43,6 @@ app.listen(port, () => {
 
 //--- HTTP PUT: Update existing product by id
 //TODO
+
+//--- HTTP Delete: Delete product by id
+//TODO
