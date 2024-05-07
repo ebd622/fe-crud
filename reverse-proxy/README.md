@@ -1,5 +1,5 @@
-# Express-API 
-This is a product API based on Express server
+# Reverse proxy
+This is Nginx-based reverse proxy server
 TODO
 
 ## Run server
