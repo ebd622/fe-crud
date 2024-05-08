@@ -13,12 +13,40 @@ docker run -d --name nginx-base -p 80:80 nginx:latest
 docker cp nginx-base:/etc/nginx/conf.d/default.conf ~/tmp/default.conf
 ```
 
-Add config
+#### 3. Edit default.conf to add a path amd and port in a docker-host where Nginx should route requests
 ```
     location /v1/products {
         proxy_pass http://host.docker.internal:3000/v1/products;
     }
 ```
+After adding, your default.conf will look like this
+```
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name  localhost;
+
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+
+    location /v1/products {
+        proxy_pass http://host.docker.internal:3000/v1/products;
+    }
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
+```
+
 
 ### Run a container
 ```
