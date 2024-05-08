@@ -1,6 +1,5 @@
 # Reverse proxy
-This is Nginx-based reverse proxy server
-TODO
+This is Nginx-based reverse proxy server, running in a Docker container.
 
 ## Configure and run
 ### Configure
