@@ -56,8 +56,14 @@ docker cp ~/tmp/default.conf nginx-base:/etc/nginx/conf.d/
 sudo docker exec nginx-base nginx -t
 sudo docker exec nginx-base nginx -s reload
 ```
+#### 6. Hit a required path in a docker-host to make sure that a reverse-proxy config is correct
+```
+http://localhost/v1/products
+```
+
 
 ### Run a container
+If you have already configured 
 ```
 docker start nginx-base
 ```
