@@ -62,7 +62,8 @@ Now both requests should work in your docker-host
 http://localhost:3000/v1/products
 http://localhost/v1/products
 ```
-
+The first request is to a server running on port `3000` in your `localhost` <br/>
+The second one is to Nginx running in a docker container. Nginx will forward an original request to tge port `3000` in docker-host.
 
 ### Run a container
 If you have already configured 
