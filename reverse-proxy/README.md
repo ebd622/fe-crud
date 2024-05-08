@@ -57,7 +57,9 @@ sudo docker exec nginx-base nginx -t
 sudo docker exec nginx-base nginx -s reload
 ```
 #### 6. Hit a required path in a docker-host to make sure that a reverse-proxy config is correct
+Now both requests should work in your docker-host
 ```
+http://localhost:3000/v1/products
 http://localhost/v1/products
 ```
 
