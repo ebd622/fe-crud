@@ -47,7 +47,15 @@ server {
     }
 }
 ```
-
+#### 4. Copy the Nginx config file back to Docker
+```
+docker cp ~/tmp/default.conf nginx-base:/etc/nginx/conf.d/
+```
+#### 5. Validate and reload the Docker Nginx reverse proxy configuration
+```
+sudo docker exec nginx-base nginx -t
+sudo docker exec nginx-base nginx -s reload
+```
 
 ### Run a container
 ```
