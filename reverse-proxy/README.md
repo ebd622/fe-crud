@@ -4,9 +4,13 @@ TODO
 
 ## Configure and run
 ### Configure
-#### Download and run the official Nginx image from Docker Hub:
+#### 1. Download and run the official Nginx image from Docker Hub:
 ```
 docker run -d --name nginx-base -p 80:80 nginx:latest
+```
+#### 2. Copy the Nginx config file from Docker container
+```
+docker cp nginx-base:/etc/nginx/conf.d/default.conf ~/tmp/default.conf
 ```
 
 Add config
