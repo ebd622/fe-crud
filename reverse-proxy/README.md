@@ -55,8 +55,8 @@ docker cp ~/tmp/default.conf nginx-base:/etc/nginx/conf.d/
 ```
 #### 5. Validate and reload the Docker Nginx reverse proxy configuration
 ```
-sudo docker exec nginx-base nginx -t
-sudo docker exec nginx-base nginx -s reload
+docker exec nginx-base nginx -t
+docker exec nginx-base nginx -s reload
 ```
 #### 6. Hit a required path in a docker-host to make sure that a reverse-proxy config is correct
 Now both requests should work in your docker-host
