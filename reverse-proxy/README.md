@@ -15,9 +15,13 @@ docker cp nginx-base:/etc/nginx/conf.d/default.conf ~/tmp/default.conf
 #### 3. Edit default.conf to add a path amd and port in a docker-host where Nginx should route requests
 In this example all request coming to Nginx path `/v1/products` will be forwarded to a port `3000` in a docker-host (host.docker.internal)
 ```
+    location /webwinkel {
+        proxy_pass http://host.docker.internal:3000/webwinkel;
+    }
     location /v1/products {
         proxy_pass http://host.docker.internal:3000/v1/products;
     }
+
 ```
 After adding, your default.conf will look like this
 ```
