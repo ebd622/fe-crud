@@ -21,7 +21,6 @@ In this example all request coming to Nginx path `/v1/products` will be forwarde
     location /v1/products {
         proxy_pass http://host.docker.internal:3000/v1/products;
     }
-
 ```
 After adding, your default.conf will look like this
 ```
