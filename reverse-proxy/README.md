@@ -74,6 +74,18 @@ docker start nginx-base
 ```
 ## Use Angular proxy
 TODO
+```
+ng serve --proxy-config proxy.conf.json
+```
+
+```
+{
+   "/v1/products": {
+      "target": "http://localhost:3000",
+      "secure": false
+   }
+}
+```
 
 
 ## Resources
