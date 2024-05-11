@@ -72,6 +72,10 @@ If you have already configured Nginx container before, just run a container
 ```
 docker start nginx-base
 ```
+## Use Angular proxy
+TODO
+
+
 ## Resources
 * [How to setup a Docker Nginx reverse proxy server example](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Docker-Nginx-reverse-proxy-setup-example)
 
