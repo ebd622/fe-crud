@@ -90,5 +90,5 @@ ng serve --proxy-config proxy.conf.json
 
 ## Resources
 * [How to setup a Docker Nginx reverse proxy server example](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Docker-Nginx-reverse-proxy-setup-example)
-* https://stackoverflow.com/questions/42100109/configure-port-for-http-in-angular-io
+* [Configure port for HTTP in Angular.io](https://stackoverflow.com/questions/42100109/configure-port-for-http-in-angular-io)
 
