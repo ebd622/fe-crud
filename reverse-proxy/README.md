@@ -73,7 +73,7 @@ If you have already configured Nginx container before, just run a container
 docker start nginx-base
 ```
 ## Use Angular proxy
-TODO
+Angular allows to set up a proxy to a backend server
 ```
 ng serve --proxy-config proxy.conf.json
 ```
