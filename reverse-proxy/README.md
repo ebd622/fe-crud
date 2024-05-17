@@ -77,7 +77,7 @@ Angular allows to set up a proxy to a backend server
 ```
 ng serve --proxy-config proxy.conf.json
 ```
-`proxy.conf.json` is a proxy configuration file. 
+`proxy.conf.json` is a proxy configuration file:
 ```
 {
    "/v1/products": {
@@ -86,6 +86,7 @@ ng serve --proxy-config proxy.conf.json
    }
 }
 ```
+In this example Angular will proxy all "/v1/products" request to "http://localhost:3000"
 
 
 ## Resources
