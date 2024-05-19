@@ -92,7 +92,7 @@ In this example Angular will proxy all "/v1/products" request to "http://localho
 ## Resources
 * [How to setup a Docker Nginx reverse proxy server example](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Docker-Nginx-reverse-proxy-setup-example)
 * [Configure port for HTTP in Angular.io](https://stackoverflow.com/questions/42100109/configure-port-for-http-in-angular-io)
-* https://stackoverflow.com/questions/37172928/how-to-proxy-api-requests-to-another-server
+* [How to proxy API requests to another server](https://stackoverflow.com/questions/37172928/how-to-proxy-api-requests-to-another-server)
 * https://juri.dev/blog/2016/11/configure-proxy-api-angular-cli/
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
