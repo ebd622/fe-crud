@@ -94,5 +94,5 @@ In this example Angular will proxy all "/v1/products" request to "http://localho
 * [Configure port for HTTP in Angular.io](https://stackoverflow.com/questions/42100109/configure-port-for-http-in-angular-io)
 * [How to proxy API requests to another server](https://stackoverflow.com/questions/37172928/how-to-proxy-api-requests-to-another-server)
 * [Configure a proxy for your API calls with Angular CLI](https://juri.dev/blog/2016/11/configure-proxy-api-angular-cli/)
-* https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+* [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
