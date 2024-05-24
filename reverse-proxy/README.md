@@ -1,4 +1,7 @@
 # Reverse proxy
+There are a different options how to configure reverse proxy:
+
+
 This is Nginx-based reverse proxy server, running in a Docker container.
 
 ## Configure and run
