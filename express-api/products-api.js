@@ -14,7 +14,7 @@ const products = [
 ];
 
 //--- HTTP GET: Fetch list of products
- app.get('/v1/products', (req, res) => {
+ app.get('/api/v1/products', (req, res) => {
   //Get all products from DB
 
   //res.send('Hello World!')
@@ -23,8 +23,17 @@ const products = [
   res.json(products)
 })
 
+//--- HTTP GET: get product by Id
+app.get('/api/v1/product/:id', (req, res) => {
+  //Get aprobudc from DB by id
+
+  //TODO: validate id!
+  console.log(`Product id:: ` + req.params.id)
+  res.json(products[req.params.id-1])
+})
+
 //--- HTTP POST: Add a new product
-app.post('/v1/products', (req, res) => {
+app.post('/api/v1/products', (req, res) => {
   const product = req.body;
 
   // TODO: Perform any necessary validation if necessary
