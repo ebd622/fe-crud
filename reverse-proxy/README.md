@@ -3,10 +3,9 @@ There are a different ways how to configure reverse proxy. Here we provide two o
 * Nginx-based reverse proxy
 * Use Angular proxy
 
-
+## Nginx-based
 This is Nginx-based reverse proxy server, running in a Docker container.
 
-## Configure and run
 ### Configure
 #### 1. Download and run the official Nginx image from Docker Hub:
 ```
