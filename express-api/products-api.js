@@ -50,13 +50,22 @@ app.post('/api/v1/products', (req, res) => {
 app.put('/api/v1/products', (req, res) => {
   const product = req.body;
 
+  const  productToUpdate= findObjectById(products, product.id);
+  if (productToUpdate) {
+    console.log(`Product found: ${JSON.stringify(productToUpdate)}`);
+    productToUpdate.naam = product.naam
+    productToUpdate.merk = product.merk
+    productToUpdate.voorraad = product.voorraad
+    productToUpdate.price = product.price
+  } else {
+    //TODO return an error
+    console.log('Product not found');
+    return res.status(404).json({error: 'Product not found'});
+  }
   // TODO: Perform any necessary validation if necessary
 
-  // TODO: fine a product in a list
-
-
-  console.log(`New product has been added: ${JSON.stringify(product)}`)
-  res.json({id: product.id});
+  console.log(`Product has been updated: ${JSON.stringify(productToUpdate)}`)
+  res.json({id: productToUpdate.id});
 });
 
 app.listen(port, () => {
@@ -68,3 +77,7 @@ app.listen(port, () => {
 
 //--- HTTP Delete: Delete product by id
 //TODO
+
+const findObjectById = (array, id) => {
+  return array.find(obj => obj.id === id);
+};
