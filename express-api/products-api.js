@@ -46,6 +46,19 @@ app.post('/api/v1/products', (req, res) => {
   res.json({id: product.id});
 });
 
+//--- HTTP PUT: Update existing product by id
+app.put('/api/v1/products', (req, res) => {
+  const product = req.body;
+
+  // TODO: Perform any necessary validation if necessary
+
+  // TODO: fine a product in a list
+
+
+  console.log(`New product has been added: ${JSON.stringify(product)}`)
+  res.json({id: product.id});
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
