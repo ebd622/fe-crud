@@ -72,9 +72,6 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
-//--- HTTP PUT: Update existing product by id
-//TODO
-
 //--- HTTP Delete: Delete product by id
 //TODO
 
