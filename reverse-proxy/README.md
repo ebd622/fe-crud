@@ -1,5 +1,5 @@
 # Reverse proxy
-There are a different ways how to configure reverse proxy. Here we provide two options:
+There are a different ways how to configure reverse proxy, two possible options are described here:
 * Nginx-based reverse proxy
 * Use Angular proxy
 
