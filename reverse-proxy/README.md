@@ -1,7 +1,7 @@
 # Reverse proxy
 There are a different ways how to configure reverse proxy, two possible options are described here:
 * Nginx-based reverse proxy
-* Use Angular proxy
+* Angular proxy (for dev-env only)
 
 ## Nginx-based
 This is Nginx-based reverse proxy server. It can be run in a Docker container to keep a local environment clean.
