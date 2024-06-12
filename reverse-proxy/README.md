@@ -77,7 +77,7 @@ If you have already configured Nginx container before, just run a container
 docker start nginx-base
 ```
 ## Use Angular dev-proxy
-Angular allows to set up a dev-server proxy to a backend server. This configuration is only for dev setup.
+Angular allows to set up a dev-server proxy to a backend server. This configuration is only for dev setup and should not be used in production.
 ```
 ng serve --proxy-config proxy.conf.json
 ```
