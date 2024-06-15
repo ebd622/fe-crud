@@ -81,7 +81,8 @@ Angular allows to set up a dev-server proxy to a backend server. This configurat
 ```
 ng serve --proxy-config proxy.conf.json
 ```
-`proxy.conf.json` is a proxy configuration file:
+`proxy.conf.json` is a proxy configuration file. 
+This is an example:
 ```
 {
    "/v1/products": {
