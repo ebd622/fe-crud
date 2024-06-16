@@ -1,5 +1,6 @@
 # Express-API 
-This is a product API based on Express server
+This is a product APIs examples, based on Express server.
+
 TODO
 
 ## Run server
