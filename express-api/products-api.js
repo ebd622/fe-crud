@@ -12,8 +12,8 @@ const products = [
   { id: 3, naam: 'Mac', merk: `Apple`, voorraad: 15, price:1150.15},
   { id: 4, naam: 'Phone', merk: `Apple`, voorraad: 25, price:1250.0},
   { id: 5, naam: 'Phone', merk: `Samsung`, voorraad: 15, price:1100.0},
-  { id: 5, naam: 'Phone', merk: `Nokia`, voorraad: 17, price:900.0},
-  { id: 6, naam: 'PC', merk: `Dell`, voorraad: 34, price:1000.25}
+  { id: 6, naam: 'Phone', merk: `Nokia`, voorraad: 17, price:900.0},
+  { id: 7, naam: 'PC', merk: `Dell`, voorraad: 34, price:1000.25}
 ];
 
 //--- HTTP GET: Fetch list of products
