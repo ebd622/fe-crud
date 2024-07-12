@@ -78,6 +78,9 @@ app.listen(port, () => {
 //--- HTTP Delete: Delete product by id
 //TODO
 
+//--- HTTP Delete: Delete all products
+//TODO
+
 const findObjectById = (array, id) => {
   return array.find(obj => obj.id === id);
 };
