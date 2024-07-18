@@ -53,7 +53,8 @@ app.post('/api/v1/products', (req, res) => {
 //--- HTTP PUT: Update existing product by id
 app.put('/api/v1/products', (req, res) => {
   const product = req.body;
-
+  
+// TODO: Perform validation 
   const  productToUpdate= findObjectById(products, product.id);
   if (productToUpdate) {
     console.log(`Product found: ${JSON.stringify(productToUpdate)}`);
@@ -66,7 +67,6 @@ app.put('/api/v1/products', (req, res) => {
     console.log('Product not found');
     return res.status(404).json({error: 'Product not found'});
   }
-  // TODO: Perform any necessary validation if necessary
 
   console.log(`Product has been updated: ${JSON.stringify(productToUpdate)}`)
   res.json({id: productToUpdate.id});
