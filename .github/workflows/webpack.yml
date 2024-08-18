@@ -25,4 +25,3 @@ jobs:
     - name: Build
       run: |
         npm install --prefix ./express-api/
-        node ./express-api/products-api.js
