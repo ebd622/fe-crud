@@ -39,6 +39,11 @@ app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
 });
 ```
+It will also required `http-proxy-middleware`
+```
+npm install http-proxy-middleware
+```
+
 
 ## Resources
 * [Install express](https://expressjs.com/en/starter/installing.html)
