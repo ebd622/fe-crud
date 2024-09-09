@@ -25,3 +25,6 @@ jobs:
     - name: Build
       run: |
         npm install --prefix ./express-api/
+
+    - name: Use secret
+      run: echo ${{ secrets.WEB_APP_API_TOKEN }}
