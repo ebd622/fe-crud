@@ -28,3 +28,8 @@ jobs:
 
     - name: Use secret
       run: echo ${{ secrets.WEB_APP_API_TOKEN }}
+
+    - name: Add, commit, and push changes
+      run: |
+        git clone https://${{ secrets.WEB_APP_API_TOKEN }}@api.glitch.com/git/winkel-app-api
+        ls -l
