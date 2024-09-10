@@ -33,4 +33,7 @@ jobs:
       run: |
         git clone https://${{ secrets.WEB_APP_API_TOKEN }}@api.glitch.com/git/winkel-app-api
         cd winkel-app-api
-        ls -l 
+        rm TODO.md
+        git add .
+        git commit -m "Update from source repo"
+        git push origin main
