@@ -38,6 +38,7 @@ jobs:
       run: |
         git clone https://${{ secrets.WEB_APP_API_TOKEN }}@api.glitch.com/git/winkel-app-api
         cd winkel-app-api
+        echo 'List a folder:'
         ls -l
         #rm TODO.md
         #git add .
