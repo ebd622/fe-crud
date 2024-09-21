@@ -34,7 +34,7 @@ jobs:
         git config --global user.email "eburdo@gmail.com"
         git config --global user.name "Eugeny"
 
-    - name: Add, commit, and push changes
+    - name: Add, commit, and push changes1
       run: |
         git clone https://${{ secrets.WEB_APP_API_TOKEN }}@api.glitch.com/git/winkel-app-api
         cd winkel-app-api
