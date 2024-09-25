@@ -51,8 +51,7 @@ jobs:
         pwd
         ls -l
         STATUS=$(git status --porcelain)
-        echo "::set-output name=status::$STATUS"
-        echo status
+        echo "status=$STATUS" >> $GITHUB_OUTPUT
         
     - name: Check Git Status
       run: |
