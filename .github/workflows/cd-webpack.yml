@@ -49,6 +49,9 @@ jobs:
         echo Path:
         pwd
         cd winkel-app-api
+        echo "Path winkel-app-api"
+        pwd
         STATUS=$(git status --porcelain)
-        echo "::set-output name=status::$STATUS"
+        echo status:
+        echo "$STATUS"
         
