@@ -3,8 +3,6 @@ name: (CD) NodeJS with Webpack
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
@@ -44,3 +42,13 @@ jobs:
         #git add .
         #git commit -m "Update from source repo"
         #git push origin main
+
+    - name: Run git status
+      id: git-status
+      run: |
+        echo Path:
+        pwd
+        cd winkel-app-api
+        STATUS=$(git status --porcelain)
+        echo "::set-output name=status::$STATUS"
+        
