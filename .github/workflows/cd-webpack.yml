@@ -46,11 +46,10 @@ jobs:
     - name: Run git status
       id: git-status
       run: |
-        echo Path:
-        pwd
         cd winkel-app-api
-        echo "Path winkel-app-api"
+        touch readme.tmp
         pwd
+        ls -l
         STATUS=$(git status --porcelain)
         echo status:
         echo "$STATUS"
