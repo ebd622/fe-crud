@@ -64,3 +64,15 @@ jobs:
           echo "No uncommitted changes."
           # Add steps to handle no uncommitted changes
         fi
+
+    - name: Step A
+      if: steps.git-status.outputs.status != ''
+      run: |
+        echo "There are uncommitted changes. Running Step A..."
+        # Add commands for Step A here
+
+    - name: Step B
+      if: steps.git-status.outputs.status == ''
+      run: |
+        echo "No uncommitted changes. Running Step B..."
+        # Add commands for Step B here
