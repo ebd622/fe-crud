@@ -56,7 +56,9 @@ jobs:
         
     - name: Check Git Status
       run: |
-        if [[ "${{ steps.git-status.outputs.status }}" != "" ]]; then
+        echo Status:
+        echo ${{ steps.git-status.outputs.STATUS }}
+        if [[ "${{ steps.git-status.outputs.STATUS }}" != "" ]]; then
           echo "There are uncommitted changes."
           # Add steps to handle uncommitted changes
         else
