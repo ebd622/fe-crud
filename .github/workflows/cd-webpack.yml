@@ -51,13 +51,13 @@ jobs:
         pwd
         ls -l
         STATUS=$(git status --porcelain)
-        echo status:
-        echo "$STATUS"
+        echo "::set-output name=status::$STATUS"
+        echo status
         
     - name: Check Git Status
       run: |
         echo Status:
-        echo ${{ steps.git-status.outputs.STATUS }}
+        echo ${{ steps.git-status.outputs.status }}
         if [[ "${{ steps.git-status.outputs.STATUS }}" != "" ]]; then
           echo "There are uncommitted changes."
           # Add steps to handle uncommitted changes
