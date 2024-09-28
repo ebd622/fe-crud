@@ -66,6 +66,7 @@ jobs:
         # Add commands for Step B here
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     strategy:
@@ -83,4 +84,5 @@ jobs:
     - name: Build
       run: |
         npm install --prefix ./express-api/
+        pwd
         ls -l
