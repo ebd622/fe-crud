@@ -67,7 +67,7 @@ jobs:
         # Add commands for Step B here
 
   deploy:
-    #needs: build
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
