@@ -53,8 +53,12 @@ jobs:
         ls -l
         pwd
         #STATUS=$(git status --porcelain)
-        STATUS=$(ls -l)
-        echo "status=$STATUS" >> $GITHUB_OUTPUT
+        #echo "status=$STATUS" >> $GITHUB_OUTPUT
+        {
+          echo 'STATUS<<EOF'
+          ls -l
+          echo EOF
+        } >> $GITHUB_OUTPUT
         
     - name: Step A
       if: steps.git-status.outputs.status != ''
