@@ -43,18 +43,6 @@ jobs:
         #git commit -m "Update from source repo"
         #git push origin main
 
-    - name: Check Glitch-git Status
-      run: |
-        echo Status:
-        echo ${{ steps.git-status.outputs.status }}
-        if [[ "${{ steps.git-status.outputs.STATUS }}" != "" ]]; then
-          echo "There are uncommitted changes."
-          # Add steps to handle uncommitted changes
-        else
-          echo "No uncommitted changes."
-          # Add steps to handle no uncommitted changes
-        fi
-
     - name: Run Glitch-git status
       id: git-status
       run: |
