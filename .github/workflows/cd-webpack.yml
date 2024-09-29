@@ -33,8 +33,10 @@ jobs:
         git config --global user.email "eburdo@gmail.com"
         git config --global user.name "Eugeny"
 
-    - name: Add, commit, and push changes1
+    - name: Clone winkel-app-api repo
       run: |
+        echo "Current path:" 
+        pwd
         git clone https://${{ secrets.WEB_APP_API_TOKEN }}@api.glitch.com/git/winkel-app-api
         cd winkel-app-api
         echo 'List a folder:'
