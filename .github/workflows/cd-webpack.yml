@@ -51,7 +51,7 @@ jobs:
       id: git-status
       run: |
         cd winkel-app-api
-        #touch readme.tmp
+        touch readme.tmp
         ls -l
         pwd
         #STATUS=$(git status --porcelain)
