@@ -5,28 +5,17 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
 
-    #strategy:
-      #matrix:
-        #node-version: [20.x]
+  check_status:
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js
       uses: actions/setup-node@v4
       with:
-        #node-version: ${{ matrix.node-version }}
         node-version: '20.x'
-
-    - name: Build
-      run: |
-        npm install --prefix ./express-api/
-
-    - name: Use secret
-      run: echo ${{ secrets.WEB_APP_API_TOKEN }}
 
     - name: Configure Git
       run: |
@@ -47,7 +36,7 @@ jobs:
         #git commit -m "Update from source repo"
         #git push origin main
 
-    - name: Run Glitch-git status
+    - name: Check Glitch-git status
       id: git-status
       run: |
         cd winkel-app-api
@@ -62,32 +51,23 @@ jobs:
           echo EOF
         } >> $GITHUB_OUTPUT
         
-    - name: Step A
-      if: steps.git-status.outputs.status != ''
-      run: |
-        echo "There are uncommitted changes. Running Step A..."
-        # Add commands for Step A here
-
-    - name: Step B
-      if: steps.git-status.outputs.status == ''
-      run: |
-        echo "No uncommitted changes. Running Step B..."
-        # Add commands for Step B here
-
   deploy:
-    needs: build
+    needs: check_status
     runs-on: ubuntu-latest
+    if: needs.check_status.git-status.outputs.status != ''
 
     steps:
-    - uses: actions/checkout@v4
+      - name: Run Job A tasks
+        run: echo "Running Job A"
 
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
+  skip:
+    needs: check_status
+    runs-on: ubuntu-latest
+    if: needs.check_status.git-status.outputs.status == ''
 
-    - name: Build
-      run: |
-        npm install --prefix ./express-api/
-        pwd
-        ls -l
+    steps:
+      - name: Run Job B tasks
+        run: echo "Running Job B"
+        
+
+
