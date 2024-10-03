@@ -51,7 +51,7 @@ jobs:
           # Add steps to handle no uncommitted changes
         fi
         #echo "::set-output name=result::B"
-        echo "result=B" >> $GITHUB_OUTPUT
+        echo "result=" >> $GITHUB_OUTPUT
         
   deploy:
     needs: check_status
