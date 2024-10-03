@@ -30,13 +30,13 @@ jobs:
       id: git-status
       run: |
         cd winkel-app-api
-        #touch readme.tmp
+        touch readme.tmp
         ls -l
         pwd
         echo 'Run git-status:'
         git status --porcelain
         {
-          echo 'STATUS<<EOF'
+          echo 'status<<EOF'
           git status --porcelain
           echo EOF
         } >> $GITHUB_OUTPUT
