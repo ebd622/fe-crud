@@ -30,7 +30,7 @@ jobs:
       id: git-status
       run: |
         cd winkel-app-api
-        #touch readme.tmp
+        touch readme.tmp
         ls -l
         pwd
         #STATUS=$(git status --porcelain)
@@ -44,7 +44,7 @@ jobs:
   deploy:
     needs: check_status
     runs-on: ubuntu-latest
-    if: needs.check_status.git-status.outputs.status != ''
+    if: needs.check_status.git-status.outputs.result != ''
 
     steps:
       - name: Run Job A tasks
@@ -53,7 +53,7 @@ jobs:
   skip:
     needs: check_status
     runs-on: ubuntu-latest
-    if: needs.check_status.git-status.outputs.status == ''
+    if: needs.check_status.git-status.outputs.result == ''
 
     steps:
       - name: Run Job B tasks
