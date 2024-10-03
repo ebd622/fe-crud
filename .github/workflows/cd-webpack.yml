@@ -41,18 +41,28 @@ jobs:
           echo EOF
         } >> $GITHUB_OUTPUT
 
-        echo Status:
-        echo ${{ steps.git-status.outputs.status }}
-        if [[ "${{ steps.git-status.outputs.STATUS }}" != "" ]]; then
-          echo "There are uncommitted changes."
-          # Add steps to handle uncommitted changes
-        else
-          echo "No uncommitted changes."
-          # Add steps to handle no uncommitted changes
-        fi
         #echo "::set-output name=result::B"
-        echo "result=" >> $GITHUB_OUTPUT
+        #echo "result=" >> $GITHUB_OUTPUT
+
+    - name: Deploy to Glitch
+      if: steps.git-status.outputs.status != ''
+      run: |
+        echo "There are uncommitted changes. Running Deploy to glitch"
+        cd FE/winkel-app/dist/winkel-app/winkel-app
+        git add .
+        echo "add done"
+        git commit -m "deploy new version"
+        echo "commit done"
+        git push
+        echo "push done"
+        echo "Deploy to glitch complete"
         
+    - name: Nothing to deploy
+      if: steps.git-status.outputs.status == ''
+      run: |
+        echo "No changes, there is nothing to deploy"      
+  
+  
   deploy:
     needs: check_status
     runs-on: ubuntu-latest
