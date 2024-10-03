@@ -46,7 +46,7 @@ jobs:
   deploy:
     needs: check_status
     runs-on: ubuntu-latest
-    if: jobs.check_status.steps.git-status.outputs.status != ''
+    if: needs.check_status.steps.git-status.outputs.status != ''
 
     steps:
       - name: Run Job A tasks
@@ -55,7 +55,7 @@ jobs:
   skip:
     needs: check_status
     runs-on: ubuntu-latest
-    if: jobs.check_status.steps.git-status.outputs.status == ''
+    if: needs.check_status.steps.git-status.outputs.status == ''
 
     steps:
       - name: Run Job B tasks
