@@ -30,7 +30,7 @@ jobs:
       id: git-status
       run: |
         cd winkel-app-api
-        touch readme.tmp
+        #touch readme.tmp
         ls -l
         pwd
         echo 'Run git-status:'
@@ -48,14 +48,6 @@ jobs:
       if: steps.git-status.outputs.status != ''
       run: |
         echo "There are uncommitted changes. Running Deploy to glitch"
-        cd FE/winkel-app/dist/winkel-app/winkel-app
-        git add .
-        echo "add done"
-        git commit -m "deploy new version"
-        echo "commit done"
-        git push
-        echo "push done"
-        echo "Deploy to glitch complete"
         
     - name: Nothing to deploy
       if: steps.git-status.outputs.status == ''
