@@ -35,13 +35,21 @@ jobs:
         pwd
         echo 'Run git-status:'
         git status --porcelain
-        #STATUS=$(git status --porcelain)
-        #echo "status=$STATUS" >> $GITHUB_OUTPUT
         {
           echo 'STATUS<<EOF'
           git status --porcelain
           echo EOF
         } >> $GITHUB_OUTPUT
+
+        echo Status:
+        echo ${{ steps.git-status.outputs.status }}
+        if [[ "${{ steps.git-status.outputs.STATUS }}" != "" ]]; then
+          echo "There are uncommitted changes."
+          # Add steps to handle uncommitted changes
+        else
+          echo "No uncommitted changes."
+          # Add steps to handle no uncommitted changes
+        fi        
         
   deploy:
     needs: check_status
