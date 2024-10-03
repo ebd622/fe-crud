@@ -49,12 +49,13 @@ jobs:
         else
           echo "No uncommitted changes."
           # Add steps to handle no uncommitted changes
-        fi        
+        fi
+        echo "::set-output name=result::B"
         
   deploy:
     needs: check_status
     runs-on: ubuntu-latest
-    if: needs.check_status.steps.git-status.outputs.STATUS != ''
+    if: needs.check_status.result != ''
 
     steps:
       - name: Run Job A tasks
@@ -63,7 +64,7 @@ jobs:
   skip:
     needs: check_status
     runs-on: ubuntu-latest
-    if: needs.check_status.steps.git-status.outputs.STATUS == ''
+    if: needs.check_status.result == ''
 
     steps:
       - name: Run Job B tasks
