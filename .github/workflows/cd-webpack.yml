@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  check_status:
+  check_changes:
     runs-on: ubuntu-latest
     outputs:
       status_result: ${{ steps.git-status.outputs.status_result }}
@@ -47,9 +47,9 @@ jobs:
         echo "status_result: ${{ steps.git-status.outputs.status_result }}"
 
   build:
-    needs: check_status
+    needs: check_changes
     runs-on: ubuntu-latest
-    if: needs.check_status.outputs.status_result != ''
+    if: needs.check_changes.outputs.status_result != ''
     steps:
       - name: Run build
         run: echo "Running Job build"
@@ -62,9 +62,9 @@ jobs:
         run: echo "Running Job deploy"
 
   skip:
-    needs: check_status
+    needs: check_changes
     runs-on: ubuntu-latest
-    if: needs.check_status.outputs.status_result == ''
+    if: needs.check_changes.outputs.status_result == ''
     steps:
       - name: skip deployment
         run: echo "No changes, skip depoyment"
