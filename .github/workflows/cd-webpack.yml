@@ -9,7 +9,7 @@ jobs:
   check_status:
     runs-on: ubuntu-latest
     outputs:
-      status: ${{ steps.git-status.outputs.status }}
+      status_result: ${{ steps.git-status.outputs.status_result }}
 
 
     steps:
@@ -39,7 +39,7 @@ jobs:
         echo 'Run git-status:'
         git status --porcelain
         {
-          echo 'status<<EOF'
+          echo 'status_result<<EOF'
           git status --porcelain
           echo EOF
         } >> $GITHUB_OUTPUT
@@ -48,12 +48,12 @@ jobs:
         #echo "result=" >> $GITHUB_OUTPUT
 
     - name: Deploy to Glitch
-      if: steps.git-status.outputs.status != ''
+      if: steps.git-status.outputs.status_result != ''
       run: |
         echo "There are uncommitted changes. Running Deploy to glitch"
         
     - name: Nothing to deploy
-      if: steps.git-status.outputs.status == ''
+      if: steps.git-status.outputs.status_result == ''
       run: |
         echo "No changes, there is nothing to deploy"      
   
@@ -61,7 +61,7 @@ jobs:
   deploy:
     needs: check_status
     runs-on: ubuntu-latest
-    if: needs.check_status.outputs.status != ''
+    if: needs.check_status.outputs.status_result != ''
     steps:
       - name: Run Job A tasks
         run: echo "Running Job A"
@@ -69,7 +69,7 @@ jobs:
   skip:
     needs: check_status
     runs-on: ubuntu-latest
-    if: needs.check_status.outputs.status == ''
+    if: needs.check_status.outputs.status_result == ''
     steps:
       - name: Run Job B tasks
         run: echo "Running Job B"
