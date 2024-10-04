@@ -78,5 +78,8 @@ jobs:
     if: needs.check_changes.outputs.status_result == ''
     steps:
       - name: skip deployment
-        run: echo "No changes, skip depoyment"
+        run: |
+          echo "No changes, skip depoyment"
+          pwd
+          ls -l
         
