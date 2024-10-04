@@ -41,7 +41,8 @@ jobs:
       id: git-status
       run: |
         pwd
-        cd winkel-app-api
+        ls -l
+        cd express-api/winkel-app-api
         #touch readme.tmp
         ls -l
         pwd
