@@ -28,18 +28,20 @@ jobs:
         cd express-api
         echo "cd express-api" 
         pwd
-        
         git clone https://${{ secrets.WEB_APP_API_TOKEN }}@api.glitch.com/git/winkel-app-api
-        ls -l
-        cd winkel-app-api
-        echo 'List a folder:'
-        ls -l
+        
+        # Copy current version into [winkel-app-api] git-project
+        cp products-api.js /winkel-app-api/server.js
+        #TODO: Copy /data/*
+        
+        echo "ls -l winkel-app-api" 
+        ls -l winkel-app-api
 
     - name: Check Glitch-git status
       id: git-status
       run: |
         cd winkel-app-api
-        touch readme.tmp
+        #touch readme.tmp
         ls -l
         pwd
         echo 'Run git-status:'
