@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "firstName": "Maxim",
+        "lastName": "Petrov",
+        "birthDate": "2000-03-30",
+        "role": "Employee",
+        "address": [
+          {
+            "street": "Street_1",
+            "houseNumber": "1",
+            "postCode": "2624ll",
+            "city": "Delft"
+          },
+          {
+            "street": "Street_2",
+            "houseNumber": "2",
+            "postCode": "2624hh",
+            "city": "Delft"
+          }
+        ],
+        "userName": "max",
+        "password": "secret2",
+        "email": "max@dd.com"
+      },
+      {
+        "id": 2,
+        "firstName": "Anna",
+        "lastName": "Petrova",
+        "birthDate": "1995-02-27",
+        "role": "Customer",
+        "address": [
+          {
+            "street": "Street_1",
+            "houseNumber": "1",
+            "postCode": "2624ll",
+            "city": "Delft"
+          },
+          {
+            "street": "Street_2",
+            "houseNumber": "2",
+            "postCode": "2624hh",
+            "city": "Delft"
+          }
+        ],
+        "userName": "anna",
+        "password": "secret1",
+        "email": "anna@dd.com"
+      },
+      {
+        "id": 3,
+        "firstName": "Admin",
+        "lastName": "Adminov",
+        "birthDate": "1995-02-27",
+        "role": "Admin",
+        "address": [
+          {
+            "street": "Street_2",
+            "houseNumber": "3",
+            "postCode": "2124lq",
+            "city": "Rijswijk"
+          },
+          {
+            "street": "Street_21",
+            "houseNumber": "12",
+            "postCode": "1124hh",
+            "city": "Rotterdam"
+          }
+        ],
+        "userName": "admin",
+        "password": "secret3",
+        "email": "admin@dd.com"
+      }      
+
+]
