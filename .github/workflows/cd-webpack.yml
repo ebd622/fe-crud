@@ -40,6 +40,7 @@ jobs:
     - name: Check Glitch-git status
       id: git-status
       run: |
+        pwd
         cd winkel-app-api
         #touch readme.tmp
         ls -l
