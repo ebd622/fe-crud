@@ -46,19 +46,26 @@ jobs:
         
         echo "status_result: ${{ steps.git-status.outputs.status_result }}"
 
-  deploy:
+  build:
     needs: check_status
     runs-on: ubuntu-latest
     if: needs.check_status.outputs.status_result != ''
     steps:
-      - name: Run Job A tasks
-        run: echo "Running Job A"
+      - name: Run build
+        run: echo "Running Job build"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run deploy
+        run: echo "Running Job deploy"
 
   skip:
     needs: check_status
     runs-on: ubuntu-latest
     if: needs.check_status.outputs.status_result == ''
     steps:
-      - name: Run Job B tasks
-        run: echo "Running Job B"
+      - name: skip deployment
+        run: echo "No changes, skip depoyment"
         
