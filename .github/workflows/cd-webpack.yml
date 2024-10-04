@@ -32,9 +32,7 @@ jobs:
 
     - name: Copy changes
       run: |
-        echo "pwd"
-        pwd
-
+        cd express-api
         ## Copy current version into [winkel-app-api] git-project
         cp products-api.js winkel-app-api/server.js
 
