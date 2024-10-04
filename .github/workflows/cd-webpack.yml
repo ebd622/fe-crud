@@ -30,6 +30,7 @@ jobs:
         pwd
         
         git clone https://${{ secrets.WEB_APP_API_TOKEN }}@api.glitch.com/git/winkel-app-api
+        ls -l
         cd winkel-app-api
         echo 'List a folder:'
         ls -l
