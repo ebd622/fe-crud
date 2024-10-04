@@ -30,6 +30,11 @@ jobs:
         pwd
         git clone https://${{ secrets.WEB_APP_API_TOKEN }}@api.glitch.com/git/winkel-app-api
 
+    - name: Copy changes
+      run: |
+        echo "pwd"
+        pwd
+
         ## Copy current version into [winkel-app-api] git-project
         cp products-api.js winkel-app-api/server.js
 
