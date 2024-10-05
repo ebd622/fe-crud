@@ -73,21 +73,21 @@ jobs:
           
       - name: Run build
         run: |
-          echo pwd
-          pwd
-          echo "ls -l"
-          ls -l
           npm install --prefix ./express-api/
-
           echo "ls -l ./express-api/ "
           ls -l ./express-api/
+          #TODO: here need to start up a server (and tests?) to make sure that it is up and running
           
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Run deploy
-        run: echo "Running Job deploy"
+        run: |
+          echo "pwd"
+          pwd
+          echo "ls -l"
+          ls -l
 
   skip:
     needs: check_changes
