@@ -33,7 +33,7 @@ jobs:
     - name: Copy changes
       run: |
         cd express-api
-        ## Copy current version into [winkel-app-api] git-project
+        ## Copy latest changes from "main" into [winkel-app-api] git-project
         cp products-api.js winkel-app-api/server.js
 
         # Remove and copy data/
