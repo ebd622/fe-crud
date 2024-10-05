@@ -65,9 +65,20 @@ jobs:
     runs-on: ubuntu-latest
     if: needs.check_changes.outputs.status_result != ''
     steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'      
+          
       - name: Run build
-        run: echo "Running Job build"
-
+        run: |
+          echo pwd
+          pwd
+          echo "ls -l"
+          ls -l
+          #npm install --prefix ./express-api/
+          
   deploy:
     needs: build
     runs-on: ubuntu-latest
