@@ -77,7 +77,10 @@ jobs:
           pwd
           echo "ls -l"
           ls -l
-          #npm install --prefix ./express-api/
+          npm install --prefix ./express-api/
+
+          echo "ls -l ./express-api/ "
+          ls -l ./express-api/
           
   deploy:
     needs: build
