@@ -12,7 +12,6 @@ jobs:
       #[status_result] is used to keep a result of "git status"
       status_result: ${{ steps.git-status.outputs.status_result }}
 
-
     steps:
     - uses: actions/checkout@v4
 
@@ -98,6 +97,8 @@ jobs:
       - name: skip deployment
         run: |
           echo "No changes, skip depoyment"
+          echo pwd
           pwd
+          echo "ls -l"
           ls -l
         
