@@ -97,8 +97,6 @@ jobs:
       - name: skip deployment
         run: |
           echo "No changes, skip depoyment"
-          echo pwd
-          pwd
           echo "ls -l"
           ls -l
         
