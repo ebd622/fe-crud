@@ -14,12 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
-    # - name: Configure Git
-    #   run: |
-    #     git config --global user.email "eburdo@gmail.com"
-    #     git config --global user.name "Eugeny"
-
     - name: Clone winkel-app-api repo
       run: |
         echo "Current path:" 
