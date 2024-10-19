@@ -22,5 +22,5 @@ jobs:
 
     - name: Build
       run: |
-        npm install --prefix ./express-api/
+        npm install --prefix ./express-api1/
         echo "Test complete!"
