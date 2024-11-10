@@ -42,7 +42,7 @@ jobs:
         pwd
         ls -l
         cd express-api/winkel-app-api
-        touch readme.tmp
+        ##touch readme.tmp
         ls -l
         pwd
         echo 'Run git-status:'
