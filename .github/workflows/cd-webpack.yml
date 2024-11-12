@@ -16,10 +16,11 @@ jobs:
     - uses: actions/checkout@v4
     - name: Clone winkel-app-api repo
       run: |
-        echo "Current path:" 
+        echo "Current path (pwd):" 
         pwd
-        cd express-api
         echo "cd express-api" 
+        cd express-api
+        echo "Current path (pwd):" 
         pwd
         git clone https://${{ secrets.WEB_APP_API_TOKEN }}@api.glitch.com/git/winkel-app-api
 
