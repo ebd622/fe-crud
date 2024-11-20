@@ -30,7 +30,7 @@ jobs:
         ## Copy latest changes from "main" into [winkel-app-api] git-project
         cp products-api.js winkel-app-api/server.js
 
-        # Remove and copy data/
+        # Replace data (Remove old and copy new)
         rm winkel-app-api/data/*
         cp data/* winkel-app-api/data
         
