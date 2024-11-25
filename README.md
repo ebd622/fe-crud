@@ -219,4 +219,4 @@ docker-compose down
 * [Handlebars templates](https://handlebarsjs.com/)
 * [How to setup a Docker Nginx reverse proxy](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Docker-Nginx-reverse-proxy-setup-example)
 * [Configure a Docker Nginx Reverse Proxy Image and Container](https://youtu.be/ZmH1L1QeNHk)
-* https://github.com/chimurai/http-proxy-middleware
+* [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware)
