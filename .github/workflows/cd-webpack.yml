@@ -46,6 +46,8 @@ jobs:
         #touch readme.tmp
         ls -l
         pwd
+        echo 'git remote -v'
+        git remote -v
         echo 'Run git-status:'
         git status --porcelain
         {
