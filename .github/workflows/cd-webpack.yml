@@ -85,6 +85,7 @@ jobs:
           pwd
           echo "ls -l"
           ls -l
+          git remote -v
 
   skip:
     needs: check_changes
