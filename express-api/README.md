@@ -46,4 +46,4 @@ npm install http-proxy-middleware
 ## Resources
 * [Install express](https://expressjs.com/en/starter/installing.html)
 * [Routing](https://expressjs.com/en/guide/routing.html)
-* https://nodejs.org/docs/latest/api/
+* [Node.js docs API](https://nodejs.org/docs/latest/api/)
