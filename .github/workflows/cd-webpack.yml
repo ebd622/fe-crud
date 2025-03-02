@@ -1,4 +1,4 @@
-name: (CD) NodeJS with Webpack 
+name: (CD) winkel-app-api
 
 on:
   push:
